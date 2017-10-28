@@ -8,10 +8,11 @@
 <script>
 export default {
   name: 'app'
-}
+};
 </script>
 
-<style>
+<style lang="scss">
+@import '../themes/index.scss';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
