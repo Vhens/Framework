@@ -20,3 +20,5 @@ new Vue({
   template: '<App/>',
   components: { App }
 });
+
+document.addEventListener('touchstart', () => {});

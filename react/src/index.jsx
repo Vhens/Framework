@@ -1,19 +1,26 @@
 import React from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
 
-import Head from './components/header/index';
-import Demo1 from './test/demo1';
+import { HashRouter, Link, hashHistory } from 'react-router-dom';
+
+import routerMap from './router/routerMap';
+
 class App extends React.Component {
     render() {
-        let data="54545454";
+        let data = "54545454";
         return (
             <div>
-                <Head name={data}/>
-                <Demo1 title={data}/>
-                <p> this is react</p>
+                <Link to="/home">Home</Link><br />
+                <Link to="/list">List</Link>
             </div>
         )
     }
 }
 
-render(<App />, document.getElementById('app'));
+render(
+    <HashRouter history={hashHistory}>
+        <App>
+            <routerMap />
+        </App>
+    </HashRouter>
+    , document.getElementById('app'));

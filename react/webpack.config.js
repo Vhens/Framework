@@ -72,6 +72,12 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.(mp3|webm|ogg)/,
+                use: {
+                    loader: 'file-loader',
+                }
             }
         ]
     },

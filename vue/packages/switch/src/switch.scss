@@ -1,0 +1,51 @@
+.gt-switch{
+  .gt-label-switch{
+    position: relative;
+    display: flex;
+    align-items: center;
+    *{
+      pointer-events: none;
+    }
+  }
+  .gt-switch-core{
+    display: inline-block;
+    position: relative;
+    width: 52px;
+    height: 32px;
+    border: 1px solid $gt-switch-border;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: $gt-switch-background-color;
+    &::after, &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: " ";
+      transition:transform .3s;
+      border-radius: 25px;
+    }
+    &::after {
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,.4);
+    }
+    &::before {
+      width: 50px;
+      height: 30px;
+      background-color: #fdfdfd;
+    }
+  }
+  .gt-switch-input{
+    display: none;
+    &:checked + .gt-switch-core{
+      background-color: $gt-switch-select-background-color;
+      &::before {
+        transform: scale(0);
+      }
+      &::after {
+        transform: translateX(20px);
+      }
+    }
+  }
+}

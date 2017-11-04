@@ -1,5 +1,5 @@
 <template>
-  <section class="gt-input">
+  <section class="gt-link">
 
   </section>
 </template>

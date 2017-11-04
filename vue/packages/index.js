@@ -1,7 +1,13 @@
 import Counter from './counter/src/counter';
+import Bar from './bar/src/bar';
+import Icon from './icon/src/icon';
+import Switch from './switch/src/switch';
 
 const Components = {
-  Counter
+  Counter,
+  Bar,
+  Icon,
+  Switch
 };
 
 const install = (Vue) => {

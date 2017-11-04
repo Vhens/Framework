@@ -73,6 +73,7 @@
     "ora": "^1.2.0",
     "phantomjs-prebuilt": "^2.1.14",
     "portfinder": "^1.0.13",
+    "postcss-loader": "^2.0.8",
     "postcss-px2rem": "^0.3.0",
     "qs": "^6.5.1",
     "raf": "^3.3.2",

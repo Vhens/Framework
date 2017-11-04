@@ -1,7 +1,11 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <gt-bar title="标题" titleClass="red" fontSize="32" color="#666">
+        <gt-icon slot="left" icon="xiangzuojiantou" fontSize="40"></gt-icon>
+        <gt-icon slot="right" icon="add" fontSize="60"></gt-icon>
+    </gt-bar>
     <gt-counter color="red" prefix="$"></gt-counter>
+    <gt-switch></gt-switch>
   </div>
 </template>
 
@@ -10,29 +14,14 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      value: false
     };
+  },
+  methods: {
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+<style lang="scss" scoped>
 </style>
