@@ -1,5 +1,5 @@
 <template>
-  <i class="iconfont" :class="getIcon" :style="{'font-size': getSize}"></i>
+  <i class="gt" :class="getIcon" :style="{'font-size': getSize}"></i>
 </template>
 
 <script>

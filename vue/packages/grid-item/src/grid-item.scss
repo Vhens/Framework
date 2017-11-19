@@ -1,0 +1,50 @@
+.gt-grid-item{
+  position: relative;
+  display: inline-block;
+  padding: 20px 10px;
+  width: 33.33333333%;
+  text-align: center;
+  box-sizing: border-box;
+  &::after,&::before{
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d9d9d9
+  }
+  &::after{
+    left: 0;
+    height: 1px;
+    border-bottom: 1px solid #d9d9d9;
+    transform-origin: 0 100%;
+    transform: scaleY(.5)
+  }
+  &::before{
+    top: 0;
+    width: 1px;
+    border-right: 1px solid #d9d9d9;
+    transform-origin: 100% 0;
+    transform: scaleX(.5)
+  }
+  .gt-grid-icon {
+    width: 28px;
+    height: 28px;
+    margin: 0 auto;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%
+    }
+    &+.gt-grid-label{
+      margin-top: 10px; 
+    }
+  }
+  .gt-grid-label {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+  }
+}

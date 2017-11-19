@@ -3,7 +3,7 @@
     <div class="left">
       <slot name="left"></slot>
     </div>
-    <div class="gt-bar-title" :class="titleClass" :style="{'font-size': getSize,'color': color}">
+    <div class="gt-bar-title" :style="{'font-size': fontSize,'color': color}">
       <slot>
         <span>{{title}}</span>
       </slot>
@@ -22,19 +22,11 @@
         type: String,
         default: ' '
       },
-      titleClass: {
-        type: [String, Array, Object]
-      },
       fontSize:{
         type: String
       },
       color: {
         type: String
-      }
-    },
-    computed: {
-      getSize () {
-        return `${this.fontSize}px`;
       }
     }
   }
