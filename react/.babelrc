@@ -1,10 +1,14 @@
 {
   "presets": [
-    ["es2015", {"modules": false}],
+    ["env", {
+      "modules": false
+    }],
     "stage-2",
     "react"
   ],
-  "plugins": [
-    "react-hot-loader/babel"
-  ]
+  "plugins": ["transform-runtime", "transform-decorators-legacy"],
+  "env": {
+    "test": {
+      "presets": ["env", "stage-2"]    }
+  }
 }

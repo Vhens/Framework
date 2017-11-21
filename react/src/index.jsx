@@ -1,26 +1,17 @@
-import React from 'react';
-import { render } from 'react-dom';
-
-import { HashRouter, Link, hashHistory } from 'react-router-dom';
-
-import routerMap from './router/routerMap';
-
-class App extends React.Component {
-    render() {
-        let data = "54545454";
-        return (
-            <div>
-                <Link to="/home">Home</Link><br />
-                <Link to="/list">List</Link>
-            </div>
-        )
-    }
+import React, {Component, PropTypes} from 'react';
+import ReactDOM, {render} from 'react-dom';
+const ROOT = document.getElementById('app');
+class App extends Component {
+  render () {
+    return (
+      <div>
+        ssssssssssss
+      </div>
+    )
+  }
 }
 
-render(
-    <HashRouter history={hashHistory}>
-        <App>
-            <routerMap />
-        </App>
-    </HashRouter>
-    , document.getElementById('app'));
+render (
+  <App />,
+  ROOT
+)
