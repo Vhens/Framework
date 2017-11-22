@@ -15,8 +15,9 @@ exports.cssLoaders = function (options) {
   options = options || {}
 
   const cssLoader = {
-    loader: 'css-loader',
+    loader: 'css-loader?importLoaders=1',
     options: {
+      minimize: process.env.NODE_ENV === 'production',
       sourceMap: options.sourceMap
     }
   }
@@ -31,28 +32,29 @@ exports.cssLoaders = function (options) {
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
     const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
+    // const loaders = [cssLoader]
     if (loader) {
       loaders.push({
-        loader: loader + '-loader',
+        loader: `${loader}-loader`,
         options: Object.assign({}, loaderOptions, {
           sourceMap: options.sourceMap
         })
       })
     }
-
+     // enable postcss by default
+    //  loaders.push({ loader: 'postcss-loader' });
     // Extract CSS when that option is specified
     // (which is the case during production build)
     if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
-        fallback: 'vue-style-loader'
+        fallback: 'style-loader',
       })
     } else {
-      return ['vue-style-loader'].concat(loaders)
+      return ['style-loader'].concat(loaders)
     }
   }
 
-  // https://vue-loader.vuejs.org/en/configurations/extract-css.html
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
