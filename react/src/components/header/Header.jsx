@@ -1,16 +1,18 @@
 import React, {Component, PropTypes} from 'react';
 import ReactDOM, {render} from 'react-dom';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 
-import './header.scss'
+import './header.scss';
 export default class Header extends Component {
-  constructor (props) {
-    super(props);
+  constructor (props, context) {
+    super(props, context);
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }
   render () {
     return (
-      <div className="header">
+      <div className='header'>
         header
       </div>
-    )
+    );
   }
 }

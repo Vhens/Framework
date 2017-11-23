@@ -2,6 +2,7 @@
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
+const eslintFriendlyFormatter = require('eslint-friendly-formatter');
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -11,7 +12,17 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
     app: './src/index.jsx',
-    babel: ['babel-polyfill']
+    babel: ['babel-polyfill'],
+    // 将 第三方依赖 单独打包
+    vendor: [
+      'react',
+      'react-dom',
+      'react-redux',
+      'react-router-dom',
+      'redux',
+      'es6-promise',
+      'whatwg-fetch'
+    ]
   },
   output: {
     path: config.build.assetsRoot,
@@ -28,6 +39,15 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   loader: 'eslint-loader',
+      //   enforce: 'pre',
+      //   include: [resolve('src')],
+      //   options: {
+      //     formatter: eslintFriendlyFormatter
+      //   }
+      // },
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',

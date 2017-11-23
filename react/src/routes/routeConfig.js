@@ -1,5 +1,5 @@
-import Home from '../containers/home/Home'
-import List from '../containers/list/List'
+import Home from '../containers/home/Home';
+import List from '../containers/list/List';
 
 const routes = [
   {
@@ -10,4 +10,4 @@ const routes = [
     path: '/list',
     component: List
   }
-]
+];
