@@ -9,12 +9,11 @@ import NotMatch from '../containers/notMatch/404';
 
 export default class RouteMap extends Component {
   render() {
-    return(
+    return (
       <Router>
         <App>
-          <Route exact path='/home' component={ Home } />
-          <Route path='/list' component={ List } />
-          {/* <Route path="*" component={NotMatch}/> */}
+          <Route exact path = "/home" component={ Home } />
+          <Route path = "/list" component={ List } />
         </App>
       </Router>
     );

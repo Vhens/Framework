@@ -9,15 +9,15 @@ const AsyncHeader = asyncComponent(() => import('../components/header/Header'));
 const AsyncFooter = asyncComponent(() => import('../components/footer/Footer'));
 
 export default class App extends Component {
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context);
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }
-  render () {
+  render() {
     return (
       <div>
         <AsyncHeader />
-          { this.props.children }
+        { this.props.children }
         <AsyncFooter />
       </div>
     );

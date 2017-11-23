@@ -1,12 +1,12 @@
-import React, {Component, PropTypes} from 'react';
-import ReactDOM, {render} from 'react-dom';
+import React, { Component, PropTypes } from 'react';
+import ReactDOM, { render } from 'react-dom';
 
 /**
  * 异步组件
  * import asyncComponent from "./components/AsyncComponent";
  * const AsyncHome = asyncComponent(() => import("./containers/Home"));
  */
-export default function asyncComponent (importComponent) {
+export default function asyncComponent(importComponent) {
   class AsyncComponent extends Component {
     constructor(props) {
       super(props);

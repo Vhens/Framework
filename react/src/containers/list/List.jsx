@@ -1,13 +1,13 @@
-import React, {Component, PropTypes} from 'react';
-import ReactDOM, {render} from 'react-dom';
+import React, { Component, PropTypes } from 'react';
+import ReactDOM, { render } from 'react-dom';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 export default class List extends Component {
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context);
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }
-  render () {
+  render() {
     return (
       <div>
         List

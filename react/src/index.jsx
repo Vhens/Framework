@@ -1,5 +1,5 @@
-import React, {Component, PropTypes} from 'react';
-import ReactDOM, {render} from 'react-dom';
+import React, { Component, PropTypes } from 'react';
+import ReactDOM, { render } from 'react-dom';
 
 import '../static/css/base.scss';
 import RouteMap from './routes/routes';

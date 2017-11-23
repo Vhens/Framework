@@ -39,15 +39,15 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.(js|jsx)$/,
-      //   loader: 'eslint-loader',
-      //   enforce: 'pre',
-      //   include: [resolve('src')],
-      //   options: {
-      //     formatter: eslintFriendlyFormatter
-      //   }
-      // },
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [resolve('src')],
+        options: {
+          formatter: eslintFriendlyFormatter
+        }
+      },
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
