@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import store from '$redux/store';
 
 import '../static/css/base.scss';
 import RouteMap from './routes/routes';
-
 const MOUNT_NODE = document.getElementById('app');
 
 // render(
@@ -18,7 +18,9 @@ const MOUNT_NODE = document.getElementById('app');
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
-      <Component />
+      <BrowserRouter basename='/'>
+        <Component />
+      </BrowserRouter>
     </AppContainer>,
     MOUNT_NODE
   );

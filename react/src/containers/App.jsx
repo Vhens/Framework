@@ -3,8 +3,8 @@ import React, { PureComponent, PropTypes } from 'react';
 // import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 import asyncComponent from '../components/AsyncComponent';
-
-const AsyncHeader = asyncComponent(() => import('../components/header/Header'));
+import Header from '../components/header/Header';
+// const AsyncHeader = asyncComponent(() => import('../components/header/Header'));
 const AsyncFooter = asyncComponent(() => import('../components/footer/Footer'));
 
 export default class App extends PureComponent {
@@ -15,7 +15,7 @@ export default class App extends PureComponent {
   render() {
     return (
       <div>
-        <AsyncHeader />
+        <Header />
         { this.props.children }
         <AsyncFooter />
       </div>

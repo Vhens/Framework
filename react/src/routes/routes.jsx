@@ -1,6 +1,6 @@
 import React, { PureComponent, PropTypes } from 'react';
 import ReactDOM, { render } from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import createBrowserHistory from 'history/createBrowserHistory';
 
@@ -14,8 +14,10 @@ export default class RouteMap extends PureComponent {
     return (
       <Router>
         <App>
-          <Route exact path = "/home" component={ Home } />
-          <Route path = "/list" component={ List } />
+          <Switch>
+            <Route exact path = "/home" component={ Home } />
+            <Route path = "/list" component={ List } />
+          </Switch>
         </App>
       </Router>
     );
