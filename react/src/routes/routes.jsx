@@ -1,13 +1,15 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PureComponent, PropTypes } from 'react';
 import ReactDOM, { render } from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import createBrowserHistory from 'history/createBrowserHistory';
 
 import App from '../containers/App';
 import Home from '../containers/home/Home';
 import List from '../containers/list/List';
 import NotMatch from '../containers/notMatch/404';
-
-export default class RouteMap extends Component {
+const history = createBrowserHistory();
+export default class RouteMap extends PureComponent {
   render() {
     return (
       <Router>

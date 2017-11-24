@@ -1,12 +1,30 @@
-import React, { Component, PropTypes } from 'react';
-import ReactDOM, { render } from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
+import { Provider } from 'react-redux';
+import store from '$redux/store';
 
 import '../static/css/base.scss';
 import RouteMap from './routes/routes';
 
 const MOUNT_NODE = document.getElementById('app');
 
-render(
-  <RouteMap />,
-  MOUNT_NODE
-);
+// render(
+//   <Provider store={store}>
+//     <RouteMap />
+//   </Provider>,
+//   MOUNT_NODE
+// );
+const render = Component => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    MOUNT_NODE
+  );
+};
+render(RouteMap);
+if (module.hot) {
+  module.hot.accept('./routes/routes', () => render(RouteMap));
+}
+

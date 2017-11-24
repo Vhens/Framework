@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import ReactDOM, { render } from 'react-dom';
 
 /**
  * 异步组件

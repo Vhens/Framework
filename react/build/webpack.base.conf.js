@@ -3,7 +3,6 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const eslintFriendlyFormatter = require('eslint-friendly-formatter');
-
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -12,7 +11,7 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
     app: './src/index.jsx',
-    babel: ['babel-polyfill'],
+    babel: ['babel-polyfill', 'react-hot-loader/patch'],
     // 将 第三方依赖 单独打包
     vendor: [
       'react',
@@ -35,6 +34,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '.scss'],
     alias: {
       '@': resolve('src'),
+      '$redux': resolve('src/redux')
     }
   },
   module: {

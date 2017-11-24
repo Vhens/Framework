@@ -9,7 +9,7 @@ const devEnv = require('./dev.env');
 
 module.exports = {
   dev: {
-    // env: devEnv,
+    env: devEnv,
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -52,7 +52,7 @@ module.exports = {
   },
 
   build: {
-    // env: prodEnv,
+    env: prodEnv,
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
 
