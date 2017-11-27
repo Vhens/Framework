@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import createBrowserHistory from 'history/createBrowserHistory';
 
-import App from '../containers/App';
+import App from '../App';
 import Home from '../containers/home/Home';
 import List from '../containers/list/List';
 import NotMatch from '../containers/notMatch/404';

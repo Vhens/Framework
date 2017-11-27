@@ -24,6 +24,7 @@ module.exports = {
     "arrow-parens": 0,
     "class-methods-use-this": 0,
     "compat/compat": 2,
+    "no-console":0,
     "comma-dangle": 0,
     "comma-style": ["error", "last"],
     "consistent-return": 2,

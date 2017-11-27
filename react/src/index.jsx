@@ -6,27 +6,23 @@ import { Provider } from 'react-redux';
 import store from '$redux/store';
 
 import '../static/css/base.scss';
-import RouteMap from './routes/routes';
+import App from './App';
 const MOUNT_NODE = document.getElementById('app');
 
-// render(
-//   <Provider store={store}>
-//     <RouteMap />
-//   </Provider>,
-//   MOUNT_NODE
-// );
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
-      <BrowserRouter basename='/'>
-        <Component />
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter basename='/'>
+          <Component />
+        </BrowserRouter>
+      </Provider>
     </AppContainer>,
     MOUNT_NODE
   );
 };
-render(RouteMap);
+render(App);
 if (module.hot) {
-  module.hot.accept('./routes/routes', () => render(RouteMap));
+  module.hot.accept('./App', () => render(App));
 }
 

@@ -1,19 +1,22 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { Link } from 'react-router-dom';
+
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-
-import * as userInfoActionsFromOtherFiles from '$redux/actions/userinfo';
 
 class Home extends PureComponent {
   constructor(props) {
     super(props);
+  }
+  componentDidMount() {
+    console.log('ssss', this.props.userInfo);
   }
   render() {
     return (
       <div>
         <Link to="/list">to list</Link><br />
         home
+        <p>我是从redux来的{this.props.userInfo.userName}</p>
       </div>
     );
   }
@@ -24,9 +27,7 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    userInfoActions: bindActionCreators(userInfoActionsFromOtherFiles, dispatch)
-  };
+  return {};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
