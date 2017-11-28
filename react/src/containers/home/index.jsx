@@ -4,12 +4,24 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import http from '../../../services/api/http';
+// import axios from 'axios';
 class Home extends PureComponent {
   constructor(props) {
     super(props);
   }
+  /* eslint-disable */
   componentDidMount() {
-    console.log('ssss', this.props.userInfo);
+    new Promise((resolve, reject) => {
+      http.get('/api/detail/detail/0',{id: 0}).then(data => {
+        console.log('data', data);
+        resolve(data);
+      })
+      .catch(e => {
+        reject(e)
+        console.error(e);
+      });
+    });
   }
   render() {
     return (

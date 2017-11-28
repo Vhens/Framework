@@ -28,7 +28,7 @@ module.exports = {
     "comma-dangle": 0,
     "comma-style": ["error", "last"],
     "consistent-return": 2,
-    "func-names": 2,
+    "func-names": 0,
     "arrow-body-style": 0,
     "eqeqeq": 2,
     "generator-star-spacing": [0],
