@@ -2,7 +2,6 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 const Index = () => import('@/components/index');
-const Login = () => import('@/components/login');
 
 // Router.prototype.goBack = () => {
 //   console.log(222);
@@ -19,11 +18,6 @@ const router = new Router({
       path: '/',
       name: 'index',
       component: Index
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login
     }
   ]
   // beforeRouteUpdate(to, from, next) {

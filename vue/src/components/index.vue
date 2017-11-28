@@ -19,8 +19,8 @@ export default {
     };
   },
   mounted () {
-    console.log(this.toast);
-    this.toast('success');
+    // console.log(this.toast);
+    // this.toast('success');
   }
 };
 </script>

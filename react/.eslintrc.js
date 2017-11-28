@@ -25,6 +25,7 @@ module.exports = {
     "class-methods-use-this": 0,
     "compat/compat": 2,
     "comma-dangle": 0,
+    'linebreak-style': ["error", "windows"],
     "comma-style": ["error", "last"],
     "consistent-return": 2,
     "func-names": 2,
