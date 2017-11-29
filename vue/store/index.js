@@ -6,6 +6,7 @@ import state from './state';
 import mutations from './mutations';
 
 import user from './modules/user';
+import detail from './modules/detail';
 
 Vue.use(Vuex);
 
@@ -17,9 +18,11 @@ const store = new Vuex.Store({
   getters,
   mutations,
   modules: {
-    user
+    user,
+    detail
   },
   strict: debug,
 });
 
 export default store;
+

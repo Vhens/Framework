@@ -6,12 +6,13 @@ import router from './router';
 
 import UI from '../packages/';
 import store from '../store';
-// import Service from '../services';
+import Service from '../services';
+
 Vue.config.productionTip = false;
 Vue.use(UI);
-// Vue.use(Service);
+Vue.use(Service);
 
-// Vue.Service = Service;
+Vue.Service = Service;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
