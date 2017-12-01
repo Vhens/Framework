@@ -5,6 +5,8 @@ const Router = require('koa-router');
 const app = new Koa();
 const router = new Router();
 
+
+const user = require('./user/user.js');
 /**
  * 获取详情数据
  * @param {request} id 商品id
@@ -24,6 +26,7 @@ router.get('/api/detail/detail/:id', function(ctx, next) {
 /**
  * 开启服务
  */
+// app.use(router.routes(), router.allowedMethods());
 app
 .use(router.routes())
 .use(router.allowedMethods());
