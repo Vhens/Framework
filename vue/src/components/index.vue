@@ -8,6 +8,8 @@
         <span slot="label">ddddd</span>
       </gt-grid-item>
     </gt-grid>
+    <gt-switch></gt-switch>
+    <gt-button to="sss"></gt-button>
   </div>
 </template>
 
@@ -34,8 +36,7 @@ export default {
     setTimeout(() => {
       console.log('我是从vuex来的数据:', this.getSiteDetails);
     }, 500);
-    // console.log(this.toast);
-    // this.toast('success');
+    console.log(this.$toast);
   }
 };
 </script>

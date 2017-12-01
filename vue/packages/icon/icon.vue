@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import { addClass } from '../../../utils/dom'
+  import { addClass } from '../../utils/dom'
   export default {
     name: 'gtIcon',
     props: {

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import gtIcon from '../../icon/src/icon';
+  import gtIcon from '../icon/icon';
 
   export default {
     name: 'gtToast',

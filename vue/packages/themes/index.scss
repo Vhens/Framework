@@ -4,9 +4,9 @@
 @import 'animation.scss';
 
 // 组件样式
-@import '../bar/src/bar.scss';
-@import '../switch/src/switch.scss';
-@import '../toast/src/toast.scss';
-@import '../button/src/button.scss';
-@import '../grid/src/grid.scss';
-@import '../grid-item/src/grid-item.scss';
+@import './default/bar.scss';
+@import './default/switch.scss';
+@import './default/toast.scss';
+@import './default/button.scss';
+@import './default/grid.scss';
+@import './default/grid-item.scss';
