@@ -5,7 +5,7 @@
     <gt-grid>
       <gt-grid-item to="dddd">
         <gt-icon icon="add" slot="icon" fontSize="50"></gt-icon>
-        <span slot="label">ddddd</span>
+        <span slot="label"><gt-counter color="red"></gt-counter></span>
       </gt-grid-item>
     </gt-grid>
     <gt-switch></gt-switch>
@@ -36,7 +36,7 @@ export default {
     setTimeout(() => {
       console.log('我是从vuex来的数据:', this.getSiteDetails);
     }, 500);
-    console.log(this.$toast);
+    this.$toast('ddd');
   }
 };
 </script>

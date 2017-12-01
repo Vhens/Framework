@@ -2,7 +2,7 @@ import Counter from './counter/counter';
 import Bar from './bar/bar';
 import Icon from './icon/icon';
 import Switch from './switch/switch';
-import Toast from './toast/toast';
+import Toast from './toast';
 import Button from './button/button';
 import Grid from './grid/grid';
 import GridItem from './grid-item/grid-item';
