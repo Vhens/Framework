@@ -67,6 +67,7 @@
     "karma-webpack": "^2.0.2",
     "koa": "^2.4.1",
     "koa-router": "^7.3.0",
+    "koa2-cors": "^2.0.5",
     "mocha": "^3.2.0",
     "mockjs": "^1.0.1-beta3",
     "node-sass": "^4.5.3",

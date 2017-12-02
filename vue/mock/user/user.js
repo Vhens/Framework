@@ -4,7 +4,7 @@ const Router = require('koa-router');
 const Mock = require('mockjs');
 
 const router = new Router();
-
+const Random = Mock.Random;
 // router.prefix('/user');
 
 router.get('/api/user', async (ctx, next) => {

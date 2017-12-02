@@ -1,18 +1,16 @@
 /* eslint-disable */
 const Koa = require('koa');
 const Router = require('koa-router');
-
+const cors = require('koa2-cors');
 const app = new Koa();
 const router = new Router();
 
-
-const user = require('./user/user.js');
 /**
  * 获取详情数据
  * @param {request} id 商品id
  */
 const detailData = require('./detail/detail.js');
-router.get('/api/detail/detail/:id', function(ctx, next) {
+router.get('/api/detail/detail/:id', async (ctx, next) => {
   const id = ctx.params.id
 	const res = {
 		errno: 0,
@@ -23,10 +21,12 @@ router.get('/api/detail/detail/:id', function(ctx, next) {
 	res.detail.content = detailData;
   ctx.body = res;
 });
+
 /**
  * 开启服务
  */
-// app.use(router.routes(), router.allowedMethods());
+
+app.use(cors());
 app
 .use(router.routes())
 .use(router.allowedMethods());
