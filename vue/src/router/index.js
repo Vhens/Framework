@@ -7,6 +7,7 @@ const Counter = () => import('@/components/counter');
 const Button = () => import('@/components/button');
 const Toast = () => import('@/components/toast');
 const Actionsheet = () => import('@/components/actionsheet');
+const Popup = () => import('@/components/popup');
 
 
 Vue.use(Router);
@@ -43,6 +44,11 @@ const router = new Router({
       path: '/actionsheet',
       name: 'actionsheet',
       component: Actionsheet
+    },
+    {
+      path: '/popup',
+      name: 'popup',
+      component: Popup
     }
   ]
 });

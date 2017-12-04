@@ -36,6 +36,10 @@ export default {
         {
           to: 'actionsheet',
           label: 'actionsheet'
+        },
+        {
+          to: 'popup',
+          label: 'popup'
         }
       ]
     };

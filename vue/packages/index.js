@@ -7,6 +7,7 @@ import Button from './button/button';
 import Grid from './grid/grid';
 import GridItem from './grid-item/grid-item';
 import Actionsheet from './actionsheet/actionsheet';
+import Popup from './popup/popup';
 
 const Components = {
   Actionsheet,
@@ -16,7 +17,8 @@ const Components = {
   Switch,
   Button,
   Grid,
-  GridItem
+  GridItem,
+  Popup
 };
 const install = (Vue) => {
   Object.keys(Components).forEach((key) => {
