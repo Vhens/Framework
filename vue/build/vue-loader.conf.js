@@ -17,6 +17,6 @@ module.exports = {
     source: 'src',
     img: 'src',
     image: 'xlink:href'
-  },
-  postcss: [px2rem({ remUnit: 37.5 })]
+  }
+  // postcss: [px2rem({ remUnit: 37.5 })]
 };

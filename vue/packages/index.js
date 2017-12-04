@@ -6,8 +6,10 @@ import Toast from './toast';
 import Button from './button/button';
 import Grid from './grid/grid';
 import GridItem from './grid-item/grid-item';
+import Actionsheet from './actionsheet/actionsheet';
 
 const Components = {
+  Actionsheet,
   Counter,
   Bar,
   Icon,

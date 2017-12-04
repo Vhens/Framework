@@ -11,7 +11,7 @@
         type: String,
         default: ' '
       },
-      fontSize: {
+      size: {
         type: String
       }
     },
@@ -20,7 +20,7 @@
         return `icon-${this.icon}`;
       },
       getSize () {
-        return `${this.fontSize}px`;
+        return `${this.size}px`;
       }
     }
   }

@@ -4,9 +4,11 @@
 @import 'animation.scss';
 
 // 组件样式
+@import './default/actionsheet.scss';
 @import './default/bar.scss';
 @import './default/switch.scss';
 @import './default/toast.scss';
 @import './default/button.scss';
 @import './default/grid.scss';
 @import './default/grid-item.scss';
+@import './default/popup.scss';

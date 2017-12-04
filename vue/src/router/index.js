@@ -2,12 +2,12 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 const Index = () => import('@/components/index');
+const Switch = () => import('@/components/switch');
+const Counter = () => import('@/components/counter');
+const Button = () => import('@/components/button');
+const Toast = () => import('@/components/toast');
+const Actionsheet = () => import('@/components/actionsheet');
 
-// Router.prototype.goBack = () => {
-//   console.log(222);
-//   this.isBack = true;
-//   this.go(-1);
-// };
 
 Vue.use(Router);
 
@@ -18,18 +18,32 @@ const router = new Router({
       path: '/',
       name: 'index',
       component: Index
+    },
+    {
+      path: '/switch',
+      name: 'switch',
+      component: Switch
+    },
+    {
+      path: '/counter',
+      name: 'counter',
+      component: Counter
+    },
+    {
+      path: '/button',
+      name: 'button',
+      component: Button
+    },
+    {
+      path: '/toast',
+      name: 'toast',
+      component: Toast
+    },
+    {
+      path: '/actionsheet',
+      name: 'actionsheet',
+      component: Actionsheet
     }
   ]
-  // beforeRouteUpdate(to, from, next) {
-  //   const isBack = this.$router.isBack;
-  //   console.log(this);
-  //   if (isBack) {
-  //     this.transitionName = 'slide-right';
-  //   } else {
-  //     this.transitionName = 'slide-left';
-  //   }
-  //   this.$router.isBack = false;
-  //   next();
-  // }
 });
 export default router;

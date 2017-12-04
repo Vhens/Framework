@@ -2,6 +2,8 @@ import Url from 'url';
 import Qs from 'qs';
 import axios from 'axios';
 
+import storage from './storage';
+
 import { HOST } from './config';
 
 /*eslint-disable */
@@ -10,6 +12,10 @@ function addzero(num) {
   return num < 10 ? `0${num}` : `${num}`;
 }
 
+storage.S.set('qq', 'ddddddd');
+console.log(storage.S.get('qq'));
+storage.L.set('ww', 'dd4545');
+console.log(storage.L.get('ww'));
 /**
  * 构建默认请求参数：siteid、token、sign;
  * 移除值为undefined的参数

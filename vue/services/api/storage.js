@@ -1,48 +1,49 @@
-const CACHE_ACCESS_TOKEN = 'CACHE_ACCESS_TOKEN';
-let accessToken = null;
-
+const CACHE_S = 'CACHE_S';
+const CACHE_L = 'CACHE_L';
 /**
- * 设置accessToken
- * @param {*} token
+ * sessionStorage存储空间
  */
-export const setAccessToken = function (token) {
-  if (token === undefined || token === null) {
-    return;
-  }
-  try {
-    accessToken = token;
-    const storage = window.sessionStorage;
-    if (storage) {
-      storage.setItem(CACHE_ACCESS_TOKEN, token);
+const S = {
+  get (key) {
+    let value = sessionStorage.getItem(`${CACHE_S}_${key}`);
+    if (/^\{.*\}$/.test(value)) {
+      value = JSON.parse(value);
     }
-  } catch (e) {
-    console.error(e);
+    return value;
+  },
+  set (key, value) {
+    if (typeof value === typeof {}) {
+      value = JSON.stringify(value);
+    }
+    return sessionStorage.setItem(`${CACHE_S}_${key}`, value);
+  },
+  remove (key) {
+    return sessionStorage.removeItem(`${CACHE_S}_${key}`);
   }
 };
-
 /**
- * 获取AccessToken
+ * localStorage存储空间
  */
-export const getAccessToken = function () {
-  if (accessToken !== null) {
-    return accessToken;
-  }
-  try {
-    const storage = window.sessionStorage;
-    if (storage) {
-      const tokenString = storage.getItem(CACHE_ACCESS_TOKEN);
-      if (tokenString !== undefined) {
-        accessToken = tokenString;
-        return accessToken;
-      }
+const L = {
+  get (key) {
+    let value = localStorage.getItem(`${CACHE_L}_${key}`);
+    if (/^\{.*\}$/.test(value)) {
+      value = JSON.parse(value);
     }
-  } catch (e) {
-    console.error(e);
+    return value;
+  },
+  set (key, value) {
+    if (typeof value === typeof {}) {
+      value = JSON.stringify(value);
+    }
+    return localStorage.setItem(`${CACHE_L}_${key}`, value);
+  },
+  remove (key) {
+    return localStorage.removeItem(`${CACHE_L}_${key}`);
   }
-  return null;
 };
-
 export default {
-  getAccessToken,
-  setAccessToken
+  S,
+  L
 };
+

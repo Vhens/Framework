@@ -10,17 +10,17 @@
     name: 'gtCounter',
     props: {
       startVal: {
-        type: Number,
+        type: [Number,String],
         required: false,
         default: 0
       },
       endVal: { //结束数字
-        type: Number,
+        type: [Number,String],
         required: false,
         default: 2017
       },
       duration: { //延迟时间
-        type: Number,
+        type: [Number,String],
         required: false,
         default: 3000
       },
@@ -176,6 +176,7 @@
         return !isNaN(parseFloat(val))
       },
       formatNumber (num) {
+        num = ~~num;
         num = num.toFixed(this.decimals);
         num += '';
         const x = num.split('.');

@@ -1,7 +1,7 @@
 <template>
   <section class="gt-toast-box">
     <transition name="gt-toast-pop">
-      <div class="gt-toast" v-show="show" :class="customClass" :style="{ 'padding': iconClass === '' ? '10px' : '20px' }">
+      <div class="gt-toast" v-show="show" :class="customClass" :style="{ 'padding': iconClass === '' ? '30px' : '20px' }">
         <gt-icon class="gt-toast-icon" :class="iconClass" v-if="iconClass !== ''"></gt-icon>
         <span class="gt-toast-text" :style="{ 'padding-top': iconClass === '' ? '0' : '10px' }">{{message}}</span>
       </div>
@@ -22,7 +22,7 @@
       },
       position: {
         type: String,
-        default: 'middle'
+        default: 'top'
       },
       iconClass: {
         type: String,

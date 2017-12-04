@@ -1,0 +1,34 @@
+.gt-actionsheet{
+  position: fixed;
+  background: #e0e0e0;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform .3s ease-out;
+  .gt-actionsheet-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .gt-actionsheet-button, .gt-actionsheet-listitem {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    color: #333;
+    background-color: #fff;
+  }
+  .gt-actionsheet-listitem {
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+
+.gt-actionsheet-float-enter,
+.gt-actionsheet-float-leave-active {
+  transform: translate3d(-50%, 100%, 0);
+}

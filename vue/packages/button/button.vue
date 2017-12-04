@@ -1,7 +1,6 @@
 <template>
-  <button class="gt-button" :class="classes" :type="actionType" :disabled="disabled" @click="handleClick">
-    <gt-icon fontSize="30" icon="loading"></gt-icon>
-    <span class="gt-button-text"><slot>{{ text }}</slot></span>
+  <button class="gt-button" :class="classes" :disabled="disabled" @click="handleClick">
+    <span class="gt-button-text"><slot></slot></span>
   </button>
 </template>
 
@@ -12,16 +11,11 @@
     name: 'gtButton',
     props: {
       type: {
-        type: String,
-        default: 'default'
+        type: String
       },
       disabled: Boolean,
       plain: Boolean,
-      text: String,
-      actionType: String,
-      showLoading: Boolean,
-      to: [String, Object],
-      mini: Boolean
+      isLoading: Boolean
     },
     methods: {
       handleClick (event) {
@@ -33,15 +27,13 @@
     },
     computed: {
       classes () {
-        return [
-          {
-            'gt-button-disabled': this.disabled,
-            'gt-button-mini': this.mini
-          },
-          `gt-button-${this.type}`,
-          this.plain ? `gt-button-plain-${this.type}` : '',
-          this.showLoading ? `gt-button-loading` : ''
-        ]
+        let res = {};
+        let classType = this.plain ? `gt-btn-plain-${this.type}` : `gt-btn-${this.type}`
+        let classDisabled = this.plain ? 'gt-btn-plain-disabled' : 'gt-btn-disabled';
+        res[classType] = true;
+        res[classDisabled] = this.disabled;
+        // res['gt-btn-loading'] = this.isLoading
+        return res;
       }
     }
   }

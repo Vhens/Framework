@@ -1,15 +1,11 @@
 <template>
   <div class="hello">
-    <gt-bar title="vue 组件" color="#fff" fontSize="32">
-    </gt-bar>
     <gt-grid>
-      <gt-grid-item to="dddd">
-        <gt-icon icon="add" slot="icon" fontSize="50"></gt-icon>
-        <span slot="label"><gt-counter color="red"></gt-counter></span>
+      <gt-grid-item :to="item.to" v-for="(item, index) of navList" :key="index">
+        <gt-icon icon="add" slot="icon" size="50"></gt-icon>
+        <span slot="label">{{item.label}}</span>
       </gt-grid-item>
     </gt-grid>
-    <gt-switch></gt-switch>
-    <gt-button to="sss"></gt-button>
   </div>
 </template>
 
@@ -20,6 +16,28 @@ export default {
   name: 'index',
   data () {
     return {
+      navList: [
+        {
+          to: 'switch',
+          label: 'switch'
+        },
+        {
+          to: 'counter',
+          label: 'counter'
+        },
+        {
+          to: 'button',
+          label: 'button'
+        },
+        {
+          to: 'toast',
+          label: 'toast'
+        },
+        {
+          to: 'actionsheet',
+          label: 'actionsheet'
+        }
+      ]
     };
   },
   methods: {
@@ -36,7 +54,6 @@ export default {
     setTimeout(() => {
       console.log('我是从vuex来的数据:', this.getSiteDetails);
     }, 500);
-    this.$toast('ddd');
   }
 };
 </script>

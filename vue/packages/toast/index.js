@@ -24,7 +24,7 @@ const returnAnInstance = instance => {
 
 const removeDom = event => {
   if (event.target.parentNode) {
-    event.target.parentNode.removeChild(event.target);
+    event.target.parentNode.parentNode.removeChild(event.target.parentNode);
   }
 };
 
