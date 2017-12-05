@@ -16,32 +16,7 @@ export default {
   name: 'index',
   data () {
     return {
-      navList: [
-        {
-          to: 'switch',
-          label: 'switch'
-        },
-        {
-          to: 'counter',
-          label: 'counter'
-        },
-        {
-          to: 'button',
-          label: 'button'
-        },
-        {
-          to: 'toast',
-          label: 'toast'
-        },
-        {
-          to: 'actionsheet',
-          label: 'actionsheet'
-        },
-        {
-          to: 'popup',
-          label: 'popup'
-        }
-      ]
+      navList: []
     };
   },
   methods: {
@@ -51,8 +26,8 @@ export default {
     ...mapGetters('detail', ['getSiteDetails'])
   },
   mounted () {
-    this.Service.detail.detail().then(res => {
-      console.log('我是从接口来的数据:', res);
+    this.Service.nav.nav().then(res => {
+      this.navList = res.navList.nav;
     });
     this.getSiteDetail();
     setTimeout(() => {

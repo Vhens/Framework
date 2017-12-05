@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <gt-bar title="vue 组件" color="#fff" fontSize="32"></gt-bar>
+    <gt-header title="vue 组件" color="#fff" fontSize="32"></gt-header>
     <router-view></router-view>
   </div>
 </template>
@@ -12,6 +12,9 @@ export default {
 </script>
 
 <style lang="scss">
+body{
+  background-color:#f5f5f5;
+}
 .box{
   padding:20px 60px;
 }

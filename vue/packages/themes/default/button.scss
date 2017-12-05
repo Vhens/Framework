@@ -1,5 +1,4 @@
 .gt-button{
-  position: relative;
   display: block;
   width: 90%;
   margin: 0 auto;
@@ -15,9 +14,35 @@
   overflow: hidden;
   border: none;
   outline: none;
+  cursor: pointer;
   -webkit-appearance: none;
   .gt-button-text{
     vertical-align: middle;
+  }
+  .gt-loading {
+    font-size: 20px;
+    color: rgba(253, 253, 253, .5);
+    vertical-align: middle;
+  }
+}
+.gt-button-default {
+  background-color: $gt-button-default;
+  color: #d8dce5;
+  border: 1px solid #d8dce5;
+  &:active {
+    background-color: rgba(188, 206, 188, 0.8);
+  }
+}
+.gt-button-primary {
+  background-color: $gt-button-primary;
+  &:active {
+    background-color: rgba(64, 158, 255, .8);
+  }
+}
+.gt-button-info {
+  background-color: $gt-button-info;
+  &:active {
+    background-color: rgba(49, 176, 213, .8);
   }
 }
 .gt-button-success {
@@ -26,9 +51,15 @@
     background-color: rgba(26, 173, 25, .8);
   }
 }
+.gt-button-danger {
+  background-color: $gt-button-danger;
+  &:active {
+    background-color: rgba(230, 67, 64, .8);
+  }
+}
 .gt-button-warn {
   background-color: $gt-button-warn;
   &:active {
-    background-color: rgba(230, 67, 64, .8);
+    background-color: rgba(235, 158, 5, .8);
   }
 }

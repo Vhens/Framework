@@ -1,10 +1,10 @@
 import http from './api/http';
 
-const DETAIL = '/api/detail/detail/0';
+const NAV_LIST = '/api/nav/navlist';
 
-const detail = () => {
+const nav = () => {
   return new Promise((resolve, reject) => {
-    http.get(DETAIL).then(res => {
+    http.get(NAV_LIST).then(res => {
       resolve(res);
     })
     .catch(e => {
@@ -13,4 +13,4 @@ const detail = () => {
   });
 };
 
-export default { detail };
+export default { nav };

@@ -1,10 +1,12 @@
 import http from './api/http';
 
 import detail from './detail';
+import nav from './nav';
 
 const services = {
   http,
-  detail
+  detail,
+  nav
 };
 
 const install = Vue => {

@@ -8,6 +8,8 @@ const Button = () => import('@/components/button');
 const Toast = () => import('@/components/toast');
 const Actionsheet = () => import('@/components/actionsheet');
 const Popup = () => import('@/components/popup');
+const Row = () => import('@/components/row');
+const Accordion = () => import('@/components/accordion');
 
 
 Vue.use(Router);
@@ -49,6 +51,16 @@ const router = new Router({
       path: '/popup',
       name: 'popup',
       component: Popup
+    },
+    {
+      path: '/row',
+      name: 'row',
+      component: Row
+    },
+    {
+      path: '/accordion',
+      name: 'accordion',
+      component: Accordion
     }
   ]
 });

@@ -1,4 +1,4 @@
-.gt-bar{
+.gt-header{
   display: flex;
   align-self: flex-start;
   justify-content: flex-start;
@@ -7,8 +7,8 @@
   z-index: 100;
   width: 100%;
   padding: 0 20px;
-  color: $gt-bar-color;
-  background-color: $gt-bar-background-color;
+  color: $gt-header-color;
+  background-color: $gt-header-background-color;
   >.left,
   >.right{
     display: flex;
@@ -16,7 +16,7 @@
     align-items: center;
     height: 100%;
   }
-  .gt-bar-title{
+  .gt-header-title{
     flex: 1;
     padding-left: 8px;
     padding-right: 8px;

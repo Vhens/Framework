@@ -12,7 +12,7 @@
 
 <script>
   export default {
-    name: 'gt-grid-item',
+    name: 'gtGridItem',
     props: {
       to: String
     },

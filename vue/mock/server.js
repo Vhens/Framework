@@ -5,6 +5,17 @@ const cors = require('koa2-cors');
 const app = new Koa();
 const router = new Router();
 
+const navList = require('./nav/navList.js');
+router.get('/api/nav/navlist', async (ctx, next) => {
+	const res = {
+		errno: 0,
+		navList: {
+		}
+	}
+	res.navList = navList;
+  ctx.body = res;
+});
+
 /**
  * 获取详情数据
  * @param {request} id 商品id

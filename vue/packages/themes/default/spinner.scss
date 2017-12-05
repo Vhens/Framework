@@ -1,0 +1,13 @@
+.gt-loading{
+  display: inline-block;
+  overflow: hidden;
+  animation: circle .8s infinite linear;
+}
+@keyframes circle {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}

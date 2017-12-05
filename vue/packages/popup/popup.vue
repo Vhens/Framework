@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import Popup from '../popup';
+  import Popup from './index';
   export default {
     name: 'gtPopup',
     mixins: [Popup],

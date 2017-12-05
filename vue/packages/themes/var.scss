@@ -1,14 +1,21 @@
 //bar组件
-$gt-bar-color: #fff;
-$gt-bar-background-color: #87CEFA;
+$gt-header-color: #fff;
+$gt-header-background-color: #87CEFA;
 //切换开关
 $gt-switch-border: #d9d9d9;
 $gt-switch-background-color: #d9d9d9;
 $gt-switch-select-background-color: #26a2ff;
 
 //按钮
+$gt-button-default: #fff;
+$gt-button-primary: #409eff;
+$gt-button-info: #31b0d5;
 $gt-button-success: #1aad19;
-$gt-button-warn:#e64340;
+$gt-button-danger:#e64340;
+$gt-button-warn: #eb9e05;
 
 //九宫格
 $gt-grids-background-color:#fff;
+
+// accordion
+$gt-accordion-transition: all .25s cubic-bezier(0.4, 0.6, 0.2, 1);

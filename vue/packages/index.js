@@ -1,24 +1,29 @@
 import Counter from './counter/counter';
-import Bar from './bar/bar';
+import Header from './header/header';
 import Icon from './icon/icon';
 import Switch from './switch/switch';
 import Toast from './toast';
 import Button from './button/button';
 import Grid from './grid/grid';
-import GridItem from './grid-item/grid-item';
+import GridItem from './grid/gridItem';
 import Actionsheet from './actionsheet/actionsheet';
 import Popup from './popup/popup';
-
+import Accordion from './accordion/accordion';
+import AccordionItem from './accordion/accordionItem';
+import Row from './row/row'
 const Components = {
   Actionsheet,
   Counter,
-  Bar,
+  Header,
   Icon,
   Switch,
   Button,
   Grid,
   GridItem,
-  Popup
+  Popup,
+  Accordion,
+  AccordionItem,
+  Row
 };
 const install = (Vue) => {
   Object.keys(Components).forEach((key) => {
