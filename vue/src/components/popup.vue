@@ -18,7 +18,7 @@
       <gt-button type="primary" @click="popupRight = false" style="margin-top: 360px;">点击关闭right</gt-button>
     </gt-popup>
 
-    <gt-button type="danger" @click ="popupBottom = true">点击bottom</gt-button>
+    <gt-button type="danger" @click ="popupBottom = true">点击bottom</gt-button> <br/>
     <gt-popup v-model="popupBottom" position="bottom">
       <div class="content">
         <p>列表1</p>
@@ -26,6 +26,11 @@
         <p>列表3</p>
         <p>列表4</p>
       </div>
+    </gt-popup>
+
+    <gt-button type="success" @click="popupLeft = true">点击left</gt-button> <br/>
+    <gt-popup v-model="popupLeft" position="left" :modal="false">
+      <gt-button type="primary" @click="popupLeft = false" style="margin-top: 360px;">点击关闭right</gt-button>
     </gt-popup>
   </div>
 </template>
@@ -39,6 +44,7 @@
         popupTop: false,
         popupRight: false,
         popupBottom: false,
+        popupLeft: false,
         btnBottom: 0
       };
     },

@@ -10,6 +10,8 @@ const Actionsheet = () => import('@/components/actionsheet');
 const Popup = () => import('@/components/popup');
 const Row = () => import('@/components/row');
 const Accordion = () => import('@/components/accordion');
+const Slideout = () => import('@/components/slideout');
+const Rater = () => import('@/components/rater');
 
 
 Vue.use(Router);
@@ -61,6 +63,16 @@ const router = new Router({
       path: '/accordion',
       name: 'accordion',
       component: Accordion
+    },
+    {
+      path: '/slideout',
+      name: 'slideout',
+      component: Slideout
+    },
+    {
+      path: '/rater',
+      name: 'rater',
+      component: Rater
     }
   ]
 });

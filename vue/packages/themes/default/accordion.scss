@@ -1,43 +1,70 @@
 .gt-accordion{
   background-color: #fff;
-  .gt-accordion-item {
+  .gt-accordion-head {
     position: relative;
-    height: 100%;
-    transition: $gt-accordion-transition;
-  }
-  .gt-item-icon-right{
-    z-index: 10;
-    height: 50px;
-    line-height: 50px;
-    padding-left: 20px;
-    font-size: 18px;
-    color: #444;
-    border-width: 1px 0 1px 0;
-    border-style:solid;
-    border-color: #ccc;
-    background-color: #fff;
-    .gt-arrow-down{
+    display: box;
+    display: flexbox;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    overflow: hidden;
+    padding: 5px 20px;
+    &::after{
+      content: "";
       position: absolute;
-      top: 0;
-      right: 20px;
-      display: flex;
-      -webkit-box-align: center;
-      align-items: center;
-      transition: $gt-accordion-transition;
-      transform: rotate(0deg);
-      font-size: 18px;
-      &.rotated {
-        transform: rotate(180deg);
-      }
+      z-index: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid #d9d9d9;
+      transform: scaleY(.5);
+      transform-origin: 0 0;
     }
   }
-  .gt-accordion-content{
-    z-index: 1;
-    padding: 20px;
+  .gt-accordion-head-content{
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: box;
+    display: flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 1rem;
+  }
+  .gt-accordion-title{
+    display: box;
+    display: flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
     font-size: 16px;
+    color: #444;
+  }
+  .gt-accordion-title-full{
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+  .gt-accordion-content {
+    position: relative;
+    overflow: hidden;
+    transition: height .1s linear;
+    font-size: 14px;
+    &::after{
+      content: "";
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid #d9d9d9;
+      transform: scaleY(.5);
+      transform-origin: 0 0;
+    }
+  }
+  .gt-accordion-rotated{
+    transform: rotate(-180deg)
   }
 }
-
 .gt-accordion-enter-active, .gt-accordion-leave-active {
   transition: $gt-accordion-transition;
   -webkit-transition: $gt-accordion-transition;

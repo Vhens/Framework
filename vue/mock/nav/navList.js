@@ -30,6 +30,14 @@ const nav = [
   {
     to: 'accordion',
     label: 'accordion'
+  },
+  {
+    to: 'slideout',
+    label: 'slideout'
+  },
+  {
+    to: 'rater',
+    label: 'rater'
   }
 ];
 module.exports = {

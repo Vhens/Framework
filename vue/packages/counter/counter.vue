@@ -1,7 +1,7 @@
 <template>
   <!-- 数值计数器 -->
   <section class="gt-counter">
-    <span ref="counter">{{counter}}</span>
+    <span class="gt-counter-num" ref="counter">{{counter}}</span>
   </section>
 </template>
 
@@ -200,3 +200,9 @@
   };
 
 </script>
+
+<style>
+  .gt-counter-num{
+    font-size:16px
+  }
+</style>

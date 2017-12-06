@@ -19,7 +19,7 @@
     name: 'gtHeader',
     props: {
       title: {
-        type: String,
+        type: [String, Object],
         default: ' '
       },
       fontSize:{

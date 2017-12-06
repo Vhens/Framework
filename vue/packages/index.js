@@ -10,7 +10,9 @@ import Actionsheet from './actionsheet/actionsheet';
 import Popup from './popup/popup';
 import Accordion from './accordion/accordion';
 import AccordionItem from './accordion/accordionItem';
-import Row from './row/row'
+import Row from './row/row';
+import SlideOut from './slideout/slideout';
+import Rater from './rater/rater';
 const Components = {
   Actionsheet,
   Counter,
@@ -23,7 +25,9 @@ const Components = {
   Popup,
   Accordion,
   AccordionItem,
-  Row
+  Row,
+  SlideOut,
+  Rater
 };
 const install = (Vue) => {
   Object.keys(Components).forEach((key) => {

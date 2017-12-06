@@ -1,29 +1,36 @@
 <template>
-  <section class="gt-accordion">
-    <slot></slot>
-  </section>
+    <div class="gt-accordion">
+        <slot></slot>
+    </div>
 </template>
 
 <script>
   export default {
     name: 'gtAccordion',
+    data() {
+      return {
+        opening: false
+      }
+    },
     props: {
-       defaultIndex: String,
-       multi: {
-        type: String,
-        default: 'true',
-        validator: (v) => {
-          return v === 'true' || v === 'false'
-        }
+      accordion: {
+        type: Boolean,
+        default: false
       }
     },
-    computed: {
-      activeIndex: function () {
-        return ~~this.defaultIndex;
+    methods: {
+      open(uid) {
+        if (this.opening) {
+          return false;
+        };
+        this.$children.forEach(item => {
+            if (item._uid === uid) {
+                item.show ? item.closeItem() : item.openItem();
+            } else {
+                !this.accordion && item.closeItem();
+            }
+        });
       }
-    },
-    mounted () {
-      this.$emit('activeIndexChanged', this.activeIndex);
     }
   }
 </script>

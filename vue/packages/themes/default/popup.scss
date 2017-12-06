@@ -61,6 +61,15 @@
   backface-visibility: hidden;
   transform: translate3d(-50%,0,0);
 }
+.gt-popup-left{
+  top: 50%;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  transform: translate3d(0,-50%,0);
+}
 /**
 *遮罩层
 **/

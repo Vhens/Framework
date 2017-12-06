@@ -1,4 +1,6 @@
 .gt-header{
+  position: fixed;
+  top:0;
   display: flex;
   align-self: flex-start;
   justify-content: flex-start;
@@ -6,6 +8,8 @@
   flex-shrink: 0;
   z-index: 100;
   width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
   padding: 0 20px;
   color: $gt-header-color;
   background-color: $gt-header-background-color;

@@ -1,0 +1,24 @@
+.gt-rater{
+  display: inline-block;
+  text-align: left;
+  a{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    color: #ccc;
+  }
+  .gt-rater-container{
+    position: relative
+  }
+  .gt-rater-inner{
+    position: relative;
+    display: inline-block;
+  }
+  .gt-rater-outer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    overflow: hidden;
+}
+}

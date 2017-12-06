@@ -1,7 +1,7 @@
 <template>
   <div>
-    <gt-accordion default-index="0">
-      <gt-accordion-item title="农夫">
+    <gt-accordion>
+      <gt-accordion-item title="越人歌 ">
          <p class="content">
             今夕何夕兮，搴舟中流。<br/>
             今日何日兮，得与王子同舟。<br/>
@@ -10,7 +10,7 @@
             山有木兮木有枝，心悦君兮君不知。
           </p>
       </gt-accordion-item>
-      <gt-accordion-item title="农夫">
+      <gt-accordion-item title="木兰花">
          <p class="content">
             人生若只如初见，何事秋风悲画扇。<br/>
             等闲变却故人心，却道故人心易变。<br/>
@@ -21,18 +21,10 @@
     </gt-accordion>
   </div>
 </template>
-<script>
-  export default {
-    data () {
-      return {
-        h: '108'
-      };
-    }
-  };
-</script>
 
 <style lang="scss">
   .content{
+    padding: 20px;
     text-align: justify;
   }
 </style>

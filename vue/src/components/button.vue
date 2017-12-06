@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top:60px;">
+  <div style="margin-top:200px;">
     <gt-button type="default">默认</gt-button>
     <br/>
     <gt-button type="primary">主要</gt-button>

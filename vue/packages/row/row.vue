@@ -31,7 +31,10 @@
   export default {
     name: 'gtRow',
     props: {
-      title: String,
+      title: {
+        type: [String, Number, Boolean],
+        default: ''
+      },
       to: [Object, String],
       icon: String,
       label: String,
