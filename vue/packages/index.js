@@ -11,8 +11,9 @@ import Popup from './popup/popup';
 import Accordion from './accordion/accordion';
 import AccordionItem from './accordion/accordionItem';
 import Row from './row/row';
-import SlideOut from './slideout/slideout';
 import Rater from './rater/rater';
+import SlideOut from './slideout/slideout';
+import SlideOutButton from './slideout/slideoutButton';
 const Components = {
   Actionsheet,
   Counter,
@@ -27,6 +28,7 @@ const Components = {
   AccordionItem,
   Row,
   SlideOut,
+  SlideOutButton,
   Rater
 };
 const install = (Vue) => {

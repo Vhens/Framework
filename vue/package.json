@@ -38,6 +38,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.0",
+    "css3transform": "^1.1.8",
     "cssnano": "^3.10.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
