@@ -12,6 +12,14 @@ const Row = () => import('@/components/row');
 const Accordion = () => import('@/components/accordion');
 const Slideout = () => import('@/components/slideout');
 const Rater = () => import('@/components/rater');
+const Input = () => import('@/components/input');
+const Textarea = () => import('@/components/textarea');
+const Card = () => import('@/components/card');
+const List = () => import('@/components/list');
+const Message = () => import('@/components/message');
+const Badge = () => import('@/components/badge');
+const Divider = () => import('@/components/divider');
+const Notice = () => import('@/components/notice');
 
 
 Vue.use(Router);
@@ -73,6 +81,46 @@ const router = new Router({
       path: '/rater',
       name: 'rater',
       component: Rater
+    },
+    {
+      path: '/input',
+      name: 'input',
+      component: Input
+    },
+    {
+      path: '/textarea',
+      name: 'textarea',
+      component: Textarea
+    },
+    {
+      path: '/card',
+      name: 'card',
+      component: Card
+    },
+    {
+      path: '/list',
+      name: 'list',
+      component: List
+    },
+    {
+      path: '/message',
+      name: 'message',
+      component: Message
+    },
+    {
+      path: '/badge',
+      name: 'badge',
+      component: Badge
+    },
+    {
+      path: '/divider',
+      name: 'divider',
+      component: Divider
+    },
+    {
+      path: '/notice',
+      name: 'notice',
+      component: Notice
     }
   ]
 });

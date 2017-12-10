@@ -14,6 +14,16 @@ import Row from './row/row';
 import Rater from './rater/rater';
 import SlideOut from './slideout/slideout';
 import SlideOutButton from './slideout/slideoutButton';
+import Input from './input/input';
+import Textarea from './textarea/textarea';
+import Card from './card/card';
+import CardHeader from './card/cardHeader';
+import CardContent from './card/cardContent';
+import CardFooter from './card/cardFooter';
+import Message from './message';
+import Badge from './badge/badge';
+import Divider from './divider/divider';
+import Notice from './notice/notice';
 const Components = {
   Actionsheet,
   Counter,
@@ -29,13 +39,23 @@ const Components = {
   Row,
   SlideOut,
   SlideOutButton,
-  Rater
+  Rater,
+  Input,
+  Textarea,
+  Card,
+  CardHeader,
+  CardContent,
+  CardFooter,
+  Badge,
+  Divider,
+  Notice
 };
 const install = (Vue) => {
   Object.keys(Components).forEach((key) => {
     Vue.component(`gt${key}`, Components[key]);
   });
   Vue.prototype.$toast = Toast;
+  Vue.prototype.$message = Message;
 };
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);

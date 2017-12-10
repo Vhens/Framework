@@ -14,14 +14,15 @@
           <span v-if="label" class="gt-row-label" v-text="label"></span>
         </slot>
       </div>
-      <div class="gt-row-value" :class="{ 'is-link' : isLink }">
-        <slot>
+      <div class="gt-row-value" :class="{ 'is-link' : isLink }" v-if="$slots.value">
+        <slot name="value">
           <span v-text="value"></span>
         </slot>
       </div>
+      <slot></slot>
       <i v-if="isLink" class="gt gt-arrow-right icon-xiangyoujiantou"></i>
     </div>
-    <div class="gt-row-right">
+    <div class="gt-row-right" v-if="$slots.right">
       <slot name="right"></slot>
     </div>
   </a>

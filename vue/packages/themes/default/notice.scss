@@ -1,0 +1,17 @@
+.gt-notice {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  font-size: 12px;
+  line-height: 0.6rem;
+  color: #596380;
+  .roll-wrap {
+    width: 9999999px;
+    .roll-item {
+      // min-width: 100%;
+    }
+  }
+}
+.isTransition {
+    transition: transform 0.5s;
+}

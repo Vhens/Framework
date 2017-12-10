@@ -9,7 +9,7 @@
       <gt-slide-out-button type="warn" slot="right">
         <i class="gt icon-lajixiang"></i>
       </gt-slide-out-button>
-      <gt-slide-out-button type="warn" slot="right">
+      <gt-slide-out-button type="primary" slot="right">
         <i class="gt icon-collection"></i>
       </gt-slide-out-button>
     </gt-slide-out>

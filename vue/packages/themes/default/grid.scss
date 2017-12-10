@@ -1,6 +1,7 @@
 .gt-grids {
   position: relative;
   overflow: hidden;
+  background-color: #fff;
   &::after,&::before{
     content: " ";
     position: absolute;

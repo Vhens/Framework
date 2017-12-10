@@ -1,0 +1,22 @@
+.gt-badge {
+  display: inline-block;
+  font-size: 14px;
+  height: 18px;
+  line-height: 20px;
+  border-radius: 8px;
+  background-clip: padding-box;
+  vertical-align: middle;
+  text-align: center;
+  background: $gt-badge-bg-color;
+  color: #fff;
+}
+.gt-badge-single {
+  width: 18px;
+}
+.gt-badge-multi {
+  padding: 0 6px;
+}
+.gt-badge-dot {
+  height: auto;
+  padding: 6px;
+}

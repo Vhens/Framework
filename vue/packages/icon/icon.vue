@@ -12,7 +12,8 @@
         default: ' '
       },
       size: {
-        type: String
+        type: String,
+        default: '32'
       }
     },
     computed: {

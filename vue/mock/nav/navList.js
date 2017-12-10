@@ -38,6 +38,38 @@ const nav = [
   {
     to: 'rater',
     label: 'rater'
+  },
+  {
+    to: 'input',
+    label: 'input'
+  },
+  {
+    to: 'textarea',
+    label: 'textarea'
+  },
+  {
+    to: 'card',
+    label: 'card'
+  },
+  {
+    to: 'list',
+    label: 'list'
+  },
+  {
+    to: 'message',
+    label: 'message'
+  },
+  {
+    to: 'badge',
+    label: 'badge'
+  },
+  {
+    to: 'divider',
+    label: 'divider'
+  },
+  {
+    to: 'notice',
+    label: 'notice'
   }
 ];
 module.exports = {

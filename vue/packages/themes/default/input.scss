@@ -1,0 +1,47 @@
+.gt-input {
+    display: box;
+    display: flexbox;
+    display: flex;
+    .gt-input-icon{
+      font-size: 20px;
+    }
+}
+.gt-input-core {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  outline: 0;
+  line-height: 1.6;
+  font-size: inherit;
+  width: 100%;
+}
+.gt-input .gt-row-value {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.gt-input .gt-row-title {
+  width: 105px;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+}
+.gt-input-state.is-default {
+  margin-left: 0;
+}
+.gt-input-state {
+  color: inherit;
+  margin:0 10px;
+}
+.gt-input-clear {
+  opacity: .2;
+}
