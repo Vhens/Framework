@@ -1,6 +1,6 @@
 <template>
   <div class="gt-slide-out gt-slide-box">
-    <div class="gt-slide-out-btn" ref="gtSlideoutBtn" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
+    <div class="gt-slide-out-btn" ref="gtSlideoutBtn" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd,colse">
       <gt-row :title="title" :value="value" :is-link="isLink" :to="to"></gt-row>
     </div>
     <div class="gt-slide-out-btn-right" ref="slideoutRigthBtn">
@@ -98,6 +98,7 @@
         const gtSlideoutBtn = this.$refs.gtSlideoutBtn;
         gtSlideoutBtn.translateX = 0;
         gtSlideoutBtn.style.transition = 'all .2s ease';
+        this.$emit('touchend')
       }
     },
     mounted () {

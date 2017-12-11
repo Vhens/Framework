@@ -11,6 +11,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
+import { nav } from '../assets/nav';
 
 export default {
   name: 'index',
@@ -29,6 +30,10 @@ export default {
     this.Service.nav.nav().then(res => {
       this.navList = res.navList.nav;
     });
+    // 模拟 的服务端数据无法在github中显示，解决方法
+    if (!this.navList.length) {
+      this.navList = nav;
+    }
     this.getSiteDetail();
     setTimeout(() => {
       console.log('我是从vuex来的数据:', this.getSiteDetails);
