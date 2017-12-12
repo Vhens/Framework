@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
-    <gt-header :title="val" color="#fff" fontSize="32">
+  <div id="app" class="container">
+    <gt-header :title="val" color="#fff" fontSize="32" class="head">
       <div slot="left" @click="goBack" v-if="show">
         <i class="gt gt-icon1-left icon-xiangzuojiantou"></i>
       </div>
     </gt-header>
-   <div class="wapper" style="margin-top: 112px;">
+   <div class="wapper">
       <router-view></router-view>
    </div>
   </div>
@@ -41,6 +41,18 @@ body{
 #app{
   max-width: 640px;
   margin: 0 auto;
+}
+.container{
+  height:100vh;
+  display:flex;
+  flex-direction:column
+}
+.head{
+  flex:0 0 auto
+}
+.wapper{
+  margin-top: 60px;
+  flex:1 1 auto
 }
 .box{
   padding:20px 60px;

@@ -1,0 +1,33 @@
+.gt-textarea {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  padding: 10px;
+}
+.gt-textarea-context-box {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.gt-textarea-label {
+  display: block;
+  width: 105px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.gt-textarea-content {
+  display: block;
+  border: 0;
+  resize: none;
+  width: 100%;
+  color: inherit;
+  font-size: 1em;
+  line-height: inherit;
+  outline: 0;
+}
+.gt-textarea-counter {
+  color: #B2B2B2;
+  text-align: right;
+}

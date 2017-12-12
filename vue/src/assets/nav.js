@@ -70,6 +70,14 @@ export const nav = [
   {
     to: 'notice',
     label: 'notice'
+  },
+  {
+    to: 'lightbox',
+    label: 'lightbox'
+  },
+  {
+    to: 'number',
+    label: 'number'
   }
 ];
 

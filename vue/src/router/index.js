@@ -20,6 +20,10 @@ const Message = () => import('@/components/message');
 const Badge = () => import('@/components/badge');
 const Divider = () => import('@/components/divider');
 const Notice = () => import('@/components/notice');
+const Lightbox = () => import('@/components/lightbox');
+const Number = () => import('@/components/number');
+const Dragsort = () => import('@/components/dragsort');
+const Countdown = () => import('@/components/countdown');
 
 
 Vue.use(Router);
@@ -121,6 +125,26 @@ const router = new Router({
       path: '/notice',
       name: 'notice',
       component: Notice
+    },
+    {
+      path: '/lightbox',
+      name: 'lightbox',
+      component: Lightbox
+    },
+    {
+      path: '/number',
+      name: 'number',
+      component: Number
+    },
+    {
+      path: '/dragsort',
+      name: 'dragsort',
+      component: Dragsort
+    },
+    {
+      path: '/countdown',
+      name: 'countdown',
+      component: Countdown
     }
   ]
 });

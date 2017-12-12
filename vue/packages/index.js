@@ -24,6 +24,10 @@ import Message from './message';
 import Badge from './badge/badge';
 import Divider from './divider/divider';
 import Notice from './notice/notice';
+import Lightbox from './lightbox/lightbox';
+import Number from './number/number';
+import DragSort from './dragsort/dragsort';
+
 const Components = {
   Actionsheet,
   Counter,
@@ -48,7 +52,10 @@ const Components = {
   CardFooter,
   Badge,
   Divider,
-  Notice
+  Notice,
+  Lightbox,
+  Number,
+  DragSort
 };
 const install = (Vue) => {
   Object.keys(Components).forEach((key) => {
