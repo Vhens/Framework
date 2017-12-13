@@ -1,6 +1,6 @@
 <template>
   <div class="gt-slide-out gt-slide-box">
-    <div class="gt-slide-out-btn" ref="gtSlideoutBtn" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd,colse">
+    <div class="gt-slide-out-btn" ref="gtSlideoutBtn" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
       <gt-row :title="title" :value="value" :is-link="isLink" :to="to"></gt-row>
     </div>
     <div class="gt-slide-out-btn-right" ref="slideoutRigthBtn">

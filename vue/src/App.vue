@@ -6,7 +6,7 @@
       </div>
     </gt-header>
    <div class="wapper">
-      <router-view></router-view>
+      <router-view transition="slide" keep-alive></router-view>
    </div>
   </div>
 </template>
@@ -60,6 +60,14 @@ body{
 .gt-icon1-left{
   font-size: 18px;
   font-weight:bold;
+}
+.slide-transition {
+  transition-duration: .3s;
+  width: 100%;
+}
+.slide-enter, .slide-leave {
+  transform: translate3d(100%, 0, 0);
+  overflow: hidden;
 }
 @import '../static/font/iconfont.css';
 @import '../themes/index.scss';
