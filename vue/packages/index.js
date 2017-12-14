@@ -27,6 +27,10 @@ import Notice from './notice/notice';
 import Lightbox from './lightbox/lightbox';
 import Number from './number/number';
 import DragSort from './dragsort/dragsort';
+import Timeline from './timeline/timeline';
+import TimelineItem from './timeline/timelineItem';
+import Swipe from './swipe/swipe';
+import SwipeItem from './swipe/swipeItem';
 
 const Components = {
   Actionsheet,
@@ -55,7 +59,11 @@ const Components = {
   Notice,
   Lightbox,
   Number,
-  DragSort
+  DragSort,
+  Timeline,
+  TimelineItem,
+  Swipe,
+  SwipeItem
 };
 const install = (Vue) => {
   Object.keys(Components).forEach((key) => {

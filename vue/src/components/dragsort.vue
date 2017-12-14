@@ -38,7 +38,7 @@
 <style lang="scss" scopoed>
 .drag-list{
 	padding: 10px 10px;
-    background: #ecedf2;
+    background: #efefef;
 	.drag-item{
 		width: 100%;
     border: 1px solid #e5e5e5;

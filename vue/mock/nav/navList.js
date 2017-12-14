@@ -86,6 +86,14 @@ const nav = [
   {
     to: 'countdown',
     label: 'countdown'
+  },
+  {
+    to: 'timeline',
+    label: 'timeline'
+  },
+  {
+    to: 'swipe',
+    label: 'swipe'
   }
 ];
 module.exports = {

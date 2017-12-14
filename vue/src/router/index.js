@@ -24,6 +24,8 @@ const Lightbox = () => import('@/components/lightbox');
 const Number = () => import('@/components/number');
 const Dragsort = () => import('@/components/dragsort');
 const Countdown = () => import('@/components/countdown');
+const Timeline = () => import('@/components/timeline');
+const Swipe = () => import('@/components/swipe');
 
 
 Vue.use(Router);
@@ -145,6 +147,16 @@ const router = new Router({
       path: '/countdown',
       name: 'countdown',
       component: Countdown
+    },
+    {
+      path: '/timeline',
+      name: 'timeline',
+      component: Timeline
+    },
+    {
+      path: '/swipe',
+      name: 'swipe',
+      component: Swipe
     }
   ]
 });

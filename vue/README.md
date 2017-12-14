@@ -28,3 +28,8 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 感谢
+
+本项目参考了饿了么前端团队的 Mint-UI 项目，感谢该团队提供的大量前端构建经验和思路。
+
+## License
