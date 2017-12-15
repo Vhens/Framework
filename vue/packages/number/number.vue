@@ -16,15 +16,15 @@
   </div> -->
   <div class="gt-number">
     <div class="gt-number-primary" :class="{'gt-number-round': buttonStyle === 'round'}" v-show="!readonly">
-      <a class="gt-number-item gt-number-reduce" @click="sub" :class="{'gt-number-disabled':disabledMin,'gt-number-round-item': buttonStyle === 'round'}">
+      <div class="gt-number-item gt-number-reduce" @click="sub" :class="{'gt-number-disabled':disabledMin,'gt-number-round-item': buttonStyle === 'round'}">
         <i class="gt icon-subtract gt-number-icon"></i>
-      </a>
+      </div>
       <div class="gt-number-item gt-number-input">
         <input v-model.number="currentValue" :name="name" :style="{width: width}" :readonly="!write" pattern="[0-9]*" type="number" @blur="blur">
       </div>
-      <a class="gt-number-item gt-number-add" @click="add" :class="{'gt-number-disabled':disabledMax, '.gt-number-round-item': buttonStyle === 'round'}">
+      <div class="gt-number-item gt-number-add" @click="add" :class="{'gt-number-disabled':disabledMax, '.gt-number-round-item': buttonStyle === 'round'}">
         <i class="gt icon-add gt-number-icon"></i>
-      </a>
+      </div>
     </div>
   </div>
 </template>

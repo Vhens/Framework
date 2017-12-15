@@ -14,9 +14,9 @@
           <span v-if="label" class="gt-row-label" v-text="label"></span>
         </slot>
       </div>
-      <div class="gt-row-value" :class="{ 'is-link' : isLink }" v-if="$slots.value">
+      <div class="gt-row-value" :class="{ 'is-link' : isLink }">
+        <span v-text="value"></span>
         <slot name="value">
-          <span v-text="value"></span>
         </slot>
       </div>
       <slot></slot>

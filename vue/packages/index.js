@@ -31,6 +31,8 @@ import Timeline from './timeline/timeline';
 import TimelineItem from './timeline/timelineItem';
 import Swipe from './swipe/swipe';
 import SwipeItem from './swipe/swipeItem';
+import Picker from './picker/picker';
+import DatetimePicker from './datetime-picker/datetime-picker';
 
 const Components = {
   Actionsheet,
@@ -63,7 +65,9 @@ const Components = {
   Timeline,
   TimelineItem,
   Swipe,
-  SwipeItem
+  SwipeItem,
+  Picker,
+  DatetimePicker
 };
 const install = (Vue) => {
   Object.keys(Components).forEach((key) => {

@@ -2,15 +2,16 @@
   width: 200px;
 }
 .gt-number-primary{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 0;
   text-align: center;
 }
 .gt-number-item{
-  flex: 1;
+  display: inline-block;
+  width: 50px;
   height: 30px;
   line-height: 30px;
+  font-size: 16px;
+  vertical-align:top;
 }
 .gt-number-reduce{
   border-width: 1px 0 1px 1px;
@@ -45,12 +46,15 @@
 .gt-number-icon{
   font-size: 20px;
 }
-// .gt-number-round .gt-number-round-item{
-//   width: 20px;
-//   height: 20px;
-//   line-height: 20px;
-//   border-width: 1px 1px 1px 1px;
-//   border-color: #FF9900;
-//   text-align: center;
-//   border-radius: 100%;
-// }
+.gt-number-round .gt-number-reduce,.gt-number-round .gt-number-add{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #63B8FF;
+  border-radius: 100%;
+}
+.gt-number-round .gt-number-input{
+border: none;
+}
+.gt-number-round .gt-number-disabled{
+  border: 1px solid #ccc;
+}

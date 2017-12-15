@@ -26,6 +26,8 @@ const Dragsort = () => import('@/components/dragsort');
 const Countdown = () => import('@/components/countdown');
 const Timeline = () => import('@/components/timeline');
 const Swipe = () => import('@/components/swipe');
+const Picker = () => import('@/components/picker');
+const DateTimePicker = () => import('@/components/datetime-picker');
 
 
 Vue.use(Router);
@@ -157,6 +159,16 @@ const router = new Router({
       path: '/swipe',
       name: 'swipe',
       component: Swipe
+    },
+    {
+      path: '/picker',
+      name: 'picker',
+      component: Picker
+    },
+    {
+      path: '/datetime-picker',
+      name: 'datetime-picker',
+      component: DateTimePicker
     }
   ]
 });

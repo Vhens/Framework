@@ -94,6 +94,14 @@ const nav = [
   {
     to: 'swipe',
     label: 'swipe'
+  },
+  {
+    to: 'picker',
+    label: 'picker'
+  },
+  {
+    to: 'datetime-picker',
+    label: 'datetime-picker'
   }
 ];
 module.exports = {

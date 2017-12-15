@@ -21,6 +21,9 @@
     methods: {
       handleDel () {
         console.log('del');
+      },
+      close () {
+
       }
     }
   };

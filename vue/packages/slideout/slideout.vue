@@ -98,7 +98,7 @@
         const gtSlideoutBtn = this.$refs.gtSlideoutBtn;
         gtSlideoutBtn.translateX = 0;
         gtSlideoutBtn.style.transition = 'all .2s ease';
-        this.$emit('touchend')
+        this.$emit('close')
       }
     },
     mounted () {
