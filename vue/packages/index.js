@@ -33,6 +33,7 @@ import Swipe from './swipe/swipe';
 import SwipeItem from './swipe/swipeItem';
 import Picker from './picker/picker';
 import DatetimePicker from './datetime-picker/datetime-picker';
+import Spinner from './spinner/spinner';
 
 const Components = {
   Actionsheet,
@@ -67,7 +68,8 @@ const Components = {
   Swipe,
   SwipeItem,
   Picker,
-  DatetimePicker
+  DatetimePicker,
+  Spinner
 };
 const install = (Vue) => {
   Object.keys(Components).forEach((key) => {

@@ -102,6 +102,10 @@ const nav = [
   {
     to: 'datetime-picker',
     label: 'datetime-picker'
+  },
+  {
+    to: 'spinner',
+    label: 'spinner'
   }
 ];
 module.exports = {

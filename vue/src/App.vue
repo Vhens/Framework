@@ -45,7 +45,7 @@ body{
 .container{
   height:100vh;
   display:flex;
-  flex-direction:column
+  flex-direction:column;
 }
 .head{
   flex:0 0 auto

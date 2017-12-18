@@ -28,6 +28,7 @@ const Timeline = () => import('@/components/timeline');
 const Swipe = () => import('@/components/swipe');
 const Picker = () => import('@/components/picker');
 const DateTimePicker = () => import('@/components/datetime-picker');
+const Spinner = () => import('@/components/spinner');
 
 
 Vue.use(Router);
@@ -169,7 +170,16 @@ const router = new Router({
       path: '/datetime-picker',
       name: 'datetime-picker',
       component: DateTimePicker
+    },
+    {
+      path: '/spinner',
+      name: 'spinner',
+      component: Spinner
     }
   ]
+});
+router.beforeEach((to, from, next) => {
+  window.scrollTo(0, 0);// scroll to top
+  next();
 });
 export default router;
