@@ -34,6 +34,8 @@ import SwipeItem from './swipe/swipeItem';
 import Picker from './picker/picker';
 import DatetimePicker from './datetime-picker/datetime-picker';
 import Spinner from './spinner/spinner';
+import Tab from './tab/tab';
+import TabPanel from './tab/tab-panel';
 
 const Components = {
   Actionsheet,
@@ -69,7 +71,9 @@ const Components = {
   SwipeItem,
   Picker,
   DatetimePicker,
-  Spinner
+  Spinner,
+  Tab,
+  TabPanel
 };
 const install = (Vue) => {
   Object.keys(Components).forEach((key) => {

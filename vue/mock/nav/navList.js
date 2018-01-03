@@ -106,6 +106,10 @@ const nav = [
   {
     to: 'spinner',
     label: 'spinner'
+  },
+  {
+    to: 'tab',
+    label: 'tab'
   }
 ];
 module.exports = {

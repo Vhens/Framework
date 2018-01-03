@@ -29,6 +29,7 @@ const Swipe = () => import('@/components/swipe');
 const Picker = () => import('@/components/picker');
 const DateTimePicker = () => import('@/components/datetime-picker');
 const Spinner = () => import('@/components/spinner');
+const Tab = () => import('@/components/tab');
 
 
 Vue.use(Router);
@@ -175,6 +176,11 @@ const router = new Router({
       path: '/spinner',
       name: 'spinner',
       component: Spinner
+    },
+    {
+      path: '/tab',
+      name: 'tab',
+      component: Tab
     }
   ]
 });

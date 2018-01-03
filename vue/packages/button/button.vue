@@ -1,12 +1,13 @@
 <template>
   <button class="gt-button" :class="classes" :disabled="disabled" @click="handleClick">
-    <i class="gt gt-loading icon-loading1"  v-if="isLoading"></i>
+    <!-- <i class="gt gt-loading icon-loading1"  v-if="isLoading"></i> -->
+    <gtSpinner class="gt-loading" type="line-spin-fade" v-if="isLoading"></gtSpinner>
     <span class="gt-button-text"><slot></slot></span>
   </button>
 </template>
 
 <script>
-  // import gtIcon from '../icon/icon';
+  import gtSpinner from '../spinner/spinner';
 
   export default {
     name: 'gtButton',
@@ -24,9 +25,9 @@
         this.$emit('click', event)
       }
     },
-    // components: {
-    //   gtIcon
-    // },
+    components: {
+      gtSpinner
+    },
     computed: {
       classes () {
         let res = {};
