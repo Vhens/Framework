@@ -1,29 +1,60 @@
 const Koa = require('koa');
 const path = require('path');
-const router=require('koa-router');
 const json = require('koa-json');
+const convert = require('koa-convert');
 const bodyParser = require('koa-bodyparser');
 const koaStatic = require('koa-static');
-const views = require('koa-views')
+const views = require('koa-views');
+const logger = require('koa-logger');
+// const session = require('koa-session-minimal');
+// const MysqlStore = require('koa-mysql-session');
+
+const routers = require('./routers/index');
+
 const app = new Koa();
+
+/***************session存储配置***************************/ 
+// const sessionMysqlConfig= {
+//   user: config.database.USERNAME,
+//   password: config.database.PASSWORD,
+//   database: config.database.DATABASE,
+//   host: config.database.HOST,
+// };
+
+/****************配置session中间件*******************************/
+// app.use(session({
+//   key: 'USER_SID',
+//   store: new MysqlStore(sessionMysqlConfig)
+// }));
 
 /******************配置服务端模板渲染引擎中间件**************/
 app.use(views(path.join(__dirname, './views'), {
   extension: 'ejs'
 }))
 /***************配置静态资源加载中间件***********************/
-app.use(koaStatic(
-  path.join(__dirname, './static')
-));
+const staticPath = './static';
+app.use(convert(koaStatic(
+  path.join(__dirname, staticPath)
+)));
 
-app.use(bodyParser({
+app.use(convert(bodyParser({
   enableTypes:['json', 'form', 'text']
-}));
+})));
 
-app.use(json());
-/*******************配置路由*******************************/
-app.use(require('./controller/index.js').routes())
+app.use(convert(json()));
 
-/******************启动服务******************************/ 
-app.listen(3010)
-console.log(`app listen http://localhost:3010`);
+
+/******************配置控制台日志中间件**********************/  
+app.use(convert(logger()));
+
+/*******************初始化路由中间件*******************************/
+app.use(routers.routes()).use(routers.allowedMethods())
+
+
+
+app.on('error', function(err, ctx){
+  console.log(err)
+  log.error('server error', err, ctx);
+});
+
+module.exports = app;
