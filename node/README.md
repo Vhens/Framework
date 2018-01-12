@@ -27,6 +27,6 @@ npm run dev
 
 ### 6、 static 静态资源
 
-### views  视图层
+### 7、 views  视图层
 
 ```
