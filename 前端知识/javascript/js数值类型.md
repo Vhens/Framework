@@ -1,5 +1,5 @@
 
- 1、js中有5种基本类型: undefined 、null、 Boolean、Number、String
+ 1、js中有5种基本类型: undefined 、null、 Boolean、Number、String  
  2、复杂数据类型(引用型): Object
 
 ```
