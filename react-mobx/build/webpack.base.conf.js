@@ -60,13 +60,13 @@ module.exports = {
             loader: 'ts-loader',
             options: {
               transpileOnly: true,
-              // getCustomTransformers: () => ({
-              //   before: [tsImportPluginFactory({
-              //     libraryName: 'antd',
-              //     style: true,
-              //     libraryDirectory: 'lib'
-              //   })]
-              // })
+              getCustomTransformers: () => ({
+                before: [tsImportPluginFactory({
+                  libraryName: 'antd-mobile',
+                  style: true,
+                  libraryDirectory: 'lib'
+                })]
+              })
             }
           }
         ]

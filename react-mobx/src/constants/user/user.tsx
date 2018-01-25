@@ -5,6 +5,7 @@ import  { user }  from '../../store/user';
 interface IProps {
   user?: user
 }
+require('../../themes/defaults/user.scss');
 // import '../../themes/defaults/user.scss'
 @inject('user')
 
