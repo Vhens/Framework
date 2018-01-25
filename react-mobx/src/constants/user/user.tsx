@@ -1,18 +1,20 @@
 import * as React from 'react';
 import { inject, observer } from 'mobx-react';
-import { Button, message } from 'antd';
-import  { IStore }  from '../../store';
+import  { user }  from '../../store/user';
 
-@inject((store: IStore) => ({
-  ...store.user
-}))
+interface IProps {
+  user?: user
+}
+// import '../../themes/defaults/user.scss'
+@inject('user')
 
 @observer
-export default class User extends React.Component<any, any> {
+export default class User extends React.Component<IProps, {}> {
   render () {
+    const store = this.props.user
     return(
-      <div>
-          user
+      <div onClick={ store.login }>
+          user { store.username }
       </div>
     )
   }

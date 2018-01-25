@@ -6,7 +6,13 @@
         "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
       }
     }],
-    "stage-2"
+    "stage-2",
+    "react"
   ],
-  "plugins": ["transform-vue-jsx", "transform-runtime"]
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-vue-jsx",
+    "transform-runtime",
+    ["import", { "libraryName": "antd-mobile","style": true}]
+  ]
 }

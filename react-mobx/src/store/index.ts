@@ -1,20 +1,7 @@
-import User, { IUser } from './user';
+import user from './user';
 
-interface IStore {
-  user: IUser
-}
-class Store {
+const store = {
+  user
+};
 
-  userStore: IUser
-  name = 'abc'
-
-  constructor () {
-      this.userStore = new User();
-  }
-}
-
-export default new Store()
-export {
-  IStore,
-  IUser
-}
+export default store;
