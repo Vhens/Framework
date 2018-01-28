@@ -57,12 +57,6 @@ class App extends PureComponent {
           ? <div id="container">
             <HeaderComponent history={history}/>
             <div className="wrapper">
-              <Switch>
-                <Route exact path='/' component={HomeComponent}/>
-                <Route exact path='/list' render={props => (
-                  <List props={props}/>
-                )}/>
-              </Switch>
             </div>
             <FooterComponent history={history}/>
           </div>

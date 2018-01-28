@@ -10,8 +10,10 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/index.jsx',
-    babel: ['babel-polyfill', 'react-hot-loader/patch'],
+    babel: [
+      'babel-polyfill', 
+      'react-hot-loader/patch'
+    ],
     // 将 第三方依赖 单独打包
     vendor: [
       'react',
@@ -21,7 +23,8 @@ module.exports = {
       'redux',
       'es6-promise',
       'whatwg-fetch'
-    ]
+    ],
+    app: './src/index.jsx'
   },
   output: {
     path: config.build.assetsRoot,
@@ -31,7 +34,7 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.scss'],
+    extensions: ['.js', '.jsx', '.json', '.scss', '.web.js'],
     alias: {
       '@': resolve('src'),
       '$redux': resolve('src/redux')
