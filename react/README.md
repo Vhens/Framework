@@ -20,7 +20,7 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-
+### react +redux+react-router4+flex+sass+antd-moblie+koa2搭建项目
 ### 1、mock 模拟服务器数据层
 
 ### 2、 services  业务逻辑层，与服务器交互

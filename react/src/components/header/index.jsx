@@ -16,7 +16,8 @@ export default class Header extends PureComponent {
     this.handleMore = this.handleMore.bind(this);
   }
   handleMore() {
-    console.log('more');
+
+    console.log('more', this.props);
   }
   onSelect = (opt) => {
     this.setState({
@@ -34,10 +35,12 @@ export default class Header extends PureComponent {
       <div className="header">
         <NavBar
           mode="dark"
+          key = "navBar"
           icon={<Icon type="left" />}
-          onLeftClick={() => console.log('返回')}
+          onLeftClick={ this.handleMore }
           rightContent={[
             <Popover mask
+              key = "popover"
               overlayClassName="fortest"
               overlayStyle={{ color: 'currentColor' }}
               visible={this.state.visible}

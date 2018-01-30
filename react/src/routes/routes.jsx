@@ -7,6 +7,8 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import App from '../App';
 import Home from '../containers/home/Home';
 import List from '../containers/list/List';
+import Member from '../containers/member/member';
+import Order from '../containers/order/order';
 import NotMatch from '../containers/notMatch/404';
 const history = createBrowserHistory();
 export default class RouteMap extends PureComponent {
@@ -17,6 +19,8 @@ export default class RouteMap extends PureComponent {
           <Switch>
             <Route exact path = "/home" component={ Home } />
             <Route path = "/list" component={ List } />
+            <Route path = "/member" component={ Member } />
+            <Route path = "/order" component={ Order } />
           </Switch>
         </App>
       </Router>

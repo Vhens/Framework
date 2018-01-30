@@ -6,6 +6,10 @@ const eslintFriendlyFormatter = require('eslint-friendly-formatter');
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
+const svgDirs = [
+  require.resolve('antd-mobile').replace(/warn\.js$/, ''), // 1. 属于 antd-mobile 内置 svg 文件
+  // path.resolve(__dirname, 'src/svg'),  // 2. 自己私人的 svg 存放目录
+];
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
@@ -63,6 +67,11 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.(svg)$/i,
+        use: ['svg-sprite-loader'],
+        include: svgDirs // 把 svgDirs 路径下的所有 svg 文件交给 svg-sprite-loader 插件处理
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,

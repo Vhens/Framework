@@ -1,13 +1,15 @@
 import React, { PureComponent, PropTypes } from 'react';
 
-export default class List extends PureComponent {
+import './main.scss';
+
+export default class Main extends PureComponent {
   constructor(props, context) {
     super(props, context);
   }
   render() {
     return (
-      <div className="list">
-        List
+      <div className="main">
+        { this.props.children }
       </div>
     );
   }

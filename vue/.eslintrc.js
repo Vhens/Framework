@@ -54,7 +54,8 @@ module.exports = {
     'no-plusplus': 0,
     'no-param-reassign': 0,
     'spaced-comment': 0,
-    'no-restricted-syntax': 0
+    'no-restricted-syntax': 0,
+    'object-curly-newline': 0,
   }
 };
 
