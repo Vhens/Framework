@@ -5,7 +5,7 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import store from '$redux/store';
 
-import '../static/css/base.scss';
+import '../static/css/index.scss';
 import App from './App';
 const MOUNT_NODE = document.getElementById('app');
 

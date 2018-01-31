@@ -15,9 +15,9 @@ import Bundle from './bundle';
 /**
  * 同步组件
  */
-import HeaderComponent from './components/header/index';
-import FooterComponent from './components/footer/index';
-import HomeComponent from './containers/home/index';
+import HeaderComponent from './components/header';
+import FooterComponent from './components/footer';
+import MainComponent from './containers/main';
 
 /* eslint-disable */
 /**
@@ -56,15 +56,9 @@ class App extends PureComponent {
           this.state.initDone
           ? <div id="container">
             <HeaderComponent history={history}/>
-            <div className="wrapper">
-              <Switch>
-                <Route exact path='/' component={HomeComponent}/>
-                <Route exact path='/list' render={props => (
-                  <List props={props}/>
-                )}/>
-              </Switch>
-            </div>
-            <FooterComponent history={history}/>
+            <MainComponent></MainComponent>
+            <FooterComponent history={history}>
+            </FooterComponent>
           </div>
           : <div>正在加载...</div>
         }

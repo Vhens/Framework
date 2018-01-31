@@ -6,7 +6,7 @@ export default class List extends PureComponent {
   }
   render() {
     return (
-      <div>
+      <div className="list">
         List
       </div>
     );

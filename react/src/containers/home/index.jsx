@@ -25,7 +25,7 @@ class Home extends PureComponent {
   }
   render() {
     return (
-      <div>
+      <div className="Home">
         <Link to="/list">to list</Link><br />
         home
         <p>我是从redux来的{this.props.userInfo.userName}</p>

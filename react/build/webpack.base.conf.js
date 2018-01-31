@@ -6,12 +6,18 @@ const eslintFriendlyFormatter = require('eslint-friendly-formatter');
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
+const svgDirs = [
+  require.resolve('antd-mobile').replace(/warn\.js$/, ''), // 1. 属于 antd-mobile 内置 svg 文件
+  // path.resolve(__dirname, 'src/svg'),  // 2. 自己私人的 svg 存放目录
+];
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/index.jsx',
-    babel: ['babel-polyfill', 'react-hot-loader/patch'],
+    babel: [
+      'babel-polyfill', 
+      'react-hot-loader/patch'
+    ],
     // 将 第三方依赖 单独打包
     vendor: [
       'react',
@@ -21,7 +27,8 @@ module.exports = {
       'redux',
       'es6-promise',
       'whatwg-fetch'
-    ]
+    ],
+    app: './src/index.jsx'
   },
   output: {
     path: config.build.assetsRoot,
@@ -31,7 +38,7 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.scss'],
+    extensions: ['.js', '.jsx', '.json', '.scss', '.web.js'],
     alias: {
       '@': resolve('src'),
       '$redux': resolve('src/redux')
@@ -60,6 +67,11 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.(svg)$/i,
+        use: ['svg-sprite-loader'],
+        include: svgDirs // 把 svgDirs 路径下的所有 svg 文件交给 svg-sprite-loader 插件处理
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
