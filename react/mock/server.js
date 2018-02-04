@@ -22,6 +22,36 @@ router.get('/api/detail/detail/:id', function(ctx, next) {
   ctx.body = res;
 });
 /**
+ * 获取nav数据
+ * @param {request} id 商品id
+ */
+const navData = require('./nav/nav.js');
+router.get('/api/nav/nav', function(ctx, next) {
+	const res = {
+		errno: 0,
+		data: {
+			content: []
+		}
+	}
+	res.data.content = navData;
+  ctx.body = res;
+});
+/**
+ * 获取goods数据
+ * @param {request} id 商品id
+ */
+const goodData = require('./goods/goods.js');
+router.get('/api/goods/goods', function(ctx, next) {
+	const res = {
+		errno: 0,
+		data: {
+			content: []
+		}
+	}
+	res.data.content = goodData;
+  ctx.body = res;
+});
+/**
  * 开启服务
  */
 app

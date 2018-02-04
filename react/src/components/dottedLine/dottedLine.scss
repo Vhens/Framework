@@ -1,0 +1,28 @@
+.dotted-line{ 
+  .line{
+    position: relative;  
+    text-align: center;
+    font-size: 16px;
+    &::before,&::after{
+      content: "";  
+      width: 40%;  
+      height: 1px;  
+      position: absolute;  
+      top: 50%;  
+    }
+    &::before{
+      background: -webkit-linear-gradient(right, #108ee9, #eee);  
+      background: -o-linear-gradient(left, #108ee9, #eee);  
+      background: -moz-linear-gradient(left,#108ee9, #eee);  
+      background: linear-gradient(to left, #108ee9, #eee);  
+      left: 2px;  
+    }
+    &::after{
+      background: -webkit-linear-gradient(left, #108ee9, #eee);  
+      background: -o-linear-gradient(right, #108ee9, #eee);  
+      background: -moz-linear-gradient(right,#108ee9, #eee);  
+      background: linear-gradient(to right, #108ee9, #eee);  
+      right: 2px;  
+    }
+  }
+}

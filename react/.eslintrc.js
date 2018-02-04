@@ -71,7 +71,8 @@ module.exports = {
     "react/self-closing-comp": 0,
     "react/wrap-multilines": 0,
     "react/jsx-curly-spacing": 0,
-    "react/jsx-equals-spacing": 0
+    "react/jsx-equals-spacing": 0,
+    "prefer-destructuring": 0
   },
   "plugins": [
     "compat",

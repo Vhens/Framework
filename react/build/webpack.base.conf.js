@@ -1,3 +1,4 @@
+/*eslint-disable*/
 'use strict'
 const path = require('path')
 const utils = require('./utils')
@@ -15,8 +16,8 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
     babel: [
-      'babel-polyfill', 
-      'react-hot-loader/patch'
+      'react-hot-loader/patch',
+      'babel-polyfill'
     ],
     // 将 第三方依赖 单独打包
     vendor: [

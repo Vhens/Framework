@@ -17,7 +17,6 @@ import Bundle from './bundle';
  */
 import HeaderComponent from './components/header';
 import FooterComponent from './components/footer';
-import MainComponent from './containers/main';
 
 /* eslint-disable */
 /**
@@ -56,9 +55,10 @@ class App extends PureComponent {
           this.state.initDone
           ? <div id="container">
             <HeaderComponent history={history}/>
-            <MainComponent></MainComponent>
-            <FooterComponent history={history}>
-            </FooterComponent>
+            <div className="main">
+              { this.props.children || <span>No Content</span> }
+            </div>
+            <FooterComponent history={history}/>
           </div>
           : <div>正在加载...</div>
         }

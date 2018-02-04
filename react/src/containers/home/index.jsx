@@ -5,30 +5,47 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import http from '../../../services/api/http';
-// import axios from 'axios';
+import SwiperComponent from '../../components/swiper';
+import NoticeComponent from '../../components/notice';
+import DottedLineComponent from '../../components/dottedLine';
+import NavComponent from '../../components/nav';
+import AdvertComponent from '../../containers/advert';
+import ListComponent from '../../containers/list';
 class Home extends PureComponent {
   constructor(props) {
     super(props);
+    this.state = {
+      goods: []
+    };
   }
   /* eslint-disable */
   componentDidMount() {
     new Promise((resolve, reject) => {
-      http.get('/api/detail/detail/0',{id: 0}).then(data => {
-        console.log('data', data);
-        resolve(data);
+      http.get('/api/goods/goods').then(res => {
+        this.setState({
+          goods: res.data.content
+        })
+        resolve(res);
       })
       .catch(e => {
         reject(e)
         console.error(e);
       });
     });
+    console.log('data', this.state.goods);
   }
   render() {
     return (
       <div className="Home">
-        <Link to="/list">to list</Link><br />
+        <SwiperComponent />
+        <NoticeComponent />
+        <NavComponent />
+        <AdvertComponent />
+        <DottedLineComponent title="为你推荐"/>
+        <ListComponent data = { this.state.goods }/>
+        {/* <Link to="/list">to list</Link><br />
         home
-        <p>我是从redux来的{this.props.userInfo.userName}</p>
+        <p>我是从redux来的{this.props.userInfo.userName}</p> */}
       </div>
     );
   }
