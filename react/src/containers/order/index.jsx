@@ -1,4 +1,5 @@
 import React, { PureComponent, PropTypes } from 'react';
+<<<<<<< HEAD
 import { Tabs, WhiteSpace } from 'antd-mobile';
 import OrderList from './orderList';
 /*eslint-disable*/
@@ -21,10 +22,17 @@ export default class Order extends PureComponent {
         }
       ]
     };
+=======
+
+export default class Order extends PureComponent {
+  constructor(props, context) {
+    super(props, context);
+>>>>>>> 05078a45a87c14ee7d45c2a3bb21559a5e4c1854
   }
   render() {
     return (
       <div className="order">
+<<<<<<< HEAD
       <Tabs tabs={this.state.tabs}
         initialPage={1}
         onChange={(tab, index) => { console.log('onChange', index, tab); }}
@@ -34,6 +42,9 @@ export default class Order extends PureComponent {
          <OrderList />
         </div>
       </Tabs>
+=======
+        order
+>>>>>>> 05078a45a87c14ee7d45c2a3bb21559a5e4c1854
       </div>
     );
   }
