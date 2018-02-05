@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 import React, { PureComponent } from 'react';
 
 import { List, WhiteSpace } from 'antd-mobile';
 import './member.scss';
 // const Brief = Item.Brief;
-=======
-import React, { PureComponent, PropTypes } from 'react';
->>>>>>> 05078a45a87c14ee7d45c2a3bb21559a5e4c1854
 
 export default class Member extends PureComponent {
   constructor(props, context) {
     super(props, context);
   }
-<<<<<<< HEAD
   handleLogin() {
     this.props.history.push('/login');
   }
@@ -85,12 +80,6 @@ export default class Member extends PureComponent {
             我的收藏
           </List.Item>
         </List>
-=======
-  render() {
-    return (
-      <div className="member">
-        member
->>>>>>> 05078a45a87c14ee7d45c2a3bb21559a5e4c1854
       </div>
     );
   }

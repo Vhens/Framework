@@ -37,7 +37,6 @@ class Home extends PureComponent {
   render() {
     return (
       <div className="Home">
-<<<<<<< HEAD
         <SwiperComponent />
         <NoticeComponent />
         <NavComponent />
@@ -45,9 +44,6 @@ class Home extends PureComponent {
         <DottedLineComponent title="为你推荐"/>
         <ListComponent data = { this.state.goods }/>
         {/* <Link to="/list">to list</Link><br />
-=======
-        <Link to="/list">to list</Link><br />
->>>>>>> 05078a45a87c14ee7d45c2a3bb21559a5e4c1854
         home
         <p>我是从redux来的{this.props.userInfo.userName}</p> */}
       </div>

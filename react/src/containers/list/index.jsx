@@ -7,7 +7,6 @@ export default class List extends PureComponent {
   render() {
     return (
       <div className="list">
-<<<<<<< HEAD
         { this.props.data.map(item => 
           <div className="item" key={item.id} >
             <a href="###">
@@ -20,9 +19,6 @@ export default class List extends PureComponent {
               </div>
             </a>
           </div>)}
-=======
-        List
->>>>>>> 05078a45a87c14ee7d45c2a3bb21559a5e4c1854
       </div>
     );
   }

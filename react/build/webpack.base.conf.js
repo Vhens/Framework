@@ -16,13 +16,8 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
     babel: [
-<<<<<<< HEAD
       'react-hot-loader/patch',
       'babel-polyfill'
-=======
-      'babel-polyfill', 
-      'react-hot-loader/patch'
->>>>>>> 05078a45a87c14ee7d45c2a3bb21559a5e4c1854
     ],
     // 将 第三方依赖 单独打包
     vendor: [
