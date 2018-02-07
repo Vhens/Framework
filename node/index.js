@@ -6,25 +6,25 @@ const bodyParser = require('koa-bodyparser');
 const koaStatic = require('koa-static');
 const views = require('koa-views');
 const logger = require('koa-logger');
-// const session = require('koa-session-minimal');
-// const MysqlStore = require('koa-mysql-session');
-
+const session = require('koa-session-minimal');
+const MysqlStore = require('koa-mysql-session');
+const config = require('./config/index');
 const routers = require('./routers/index');
 const app = new Koa();
 
 /***************session存储配置***************************/ 
-// const sessionMysqlConfig= {
-//   user: config.database.USERNAME,
-//   password: config.database.PASSWORD,
-//   database: config.database.DATABASE,
-//   host: config.database.HOST,
-// };
+const sessionMysqlConfig= {
+  user: config.MYSQL.user,
+  password: config.MYSQL.password,
+  database: config.MYSQL.database,
+  host: config.MYSQL.host
+};
 
 /****************配置session中间件*******************************/
-// app.use(session({
-//   key: 'USER_SID',
-//   store: new MysqlStore(sessionMysqlConfig)
-// }));
+app.use(session({
+  key: 'USER_SID',
+  store: new MysqlStore(sessionMysqlConfig)
+}));
 
 /******************配置服务端模板渲染引擎中间件**************/
 app.use(views(path.join(__dirname, './views'), {

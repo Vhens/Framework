@@ -3,7 +3,7 @@ const user = require('../controller/user');
 const title = '登录'
 router.prefix('/login');
 router.get('/', async (ctx, next) => {
-  await ctx.render('login', { title })
+  await ctx.render('login', { title,session:ctx.session, })
 })
 router.post('/', async(ctx, next) => {
   let result = await user.login(ctx);

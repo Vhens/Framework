@@ -28,6 +28,8 @@ const user = {
       result.code = 2;
       return result;
     }
+    //将username存入Session中
+    ctx.session.username = userResult[0]['username']
     return result
   }
 }
