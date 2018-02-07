@@ -1,7 +1,6 @@
-const mysql = ('mysql');
 const config = require('../config/index');
-const pool = mysql.createPool(config);
-
+const mysql = require("mysql");
+const pool = mysql.createPool(config.MYSQL)
 let query = function(sql, values) {
   return new Promise((resolve, reject) => {
       pool.getConnection(function(err, connection) {
@@ -20,4 +19,6 @@ let query = function(sql, values) {
       })
   })
 }
-module.exports = query;
+module.exports = {
+    query
+};

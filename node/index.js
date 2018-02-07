@@ -10,7 +10,6 @@ const logger = require('koa-logger');
 // const MysqlStore = require('koa-mysql-session');
 
 const routers = require('./routers/index');
-
 const app = new Koa();
 
 /***************session存储配置***************************/ 

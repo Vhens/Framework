@@ -1,7 +1,7 @@
 const router = require('koa-router')();
 
-const home = require('../controller/home');
-const login = require('../controller/login');
+const home = require('./home');
+const login = require('./login');
 
 
 router.use(home.routes(), home.allowedMethods());
