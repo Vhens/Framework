@@ -1,0 +1,11 @@
+<!--pages/component/classify/classify.wxml-->
+<view class='layout'>
+  <view class='item nav-left'>
+    <view class='nav-left-item'>dddddd</view>
+    <view class='nav-left-item'>dddddd</view>
+    <view class='nav-left-item'>dddddd</view>
+  </view>
+  <view class='item nav-right-content'>
+  55555
+  </view>
+</view>

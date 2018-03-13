@@ -13,7 +13,7 @@
         <card :text="motto"></card>
       </div>
     </div>
-      
+
     <form class="form-container">
       <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
       <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
@@ -28,7 +28,7 @@ import card from '@/components/card'
 export default {
   data () {
     return {
-      motto: 'Hello World',
+      motto: 'Hello World5555',
       userInfo: {}
     }
   },
